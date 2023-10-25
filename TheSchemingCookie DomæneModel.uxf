@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>198</x>
-      <y>264</y>
+      <x>231</x>
+      <y>198</y>
       <w>220</w>
       <h>165</h>
     </coordinates>
@@ -22,8 +22,8 @@ CreditcardInformation</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>561</x>
-      <y>264</y>
+      <x>594</x>
+      <y>198</y>
       <w>176</w>
       <h>165</h>
     </coordinates>
@@ -36,8 +36,8 @@ Password</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>517</x>
-      <y>550</y>
+      <x>550</x>
+      <y>484</y>
       <w>231</w>
       <h>165</h>
     </coordinates>
@@ -51,8 +51,8 @@ Quantity
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>550</y>
+      <x>253</x>
+      <y>484</y>
       <w>176</w>
       <h>165</h>
     </coordinates>
@@ -60,6 +60,7 @@ Quantity
 -
 Name
 ProductId
+Price
 Description
 Calories
 Carbohydrates
@@ -70,8 +71,8 @@ Protein</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1155</x>
-      <y>550</y>
+      <x>1188</x>
+      <y>484</y>
       <w>176</w>
       <h>165</h>
     </coordinates>
@@ -85,8 +86,8 @@ AdminPassword
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>869</x>
-      <y>550</y>
+      <x>902</x>
+      <y>484</y>
       <w>176</w>
       <h>165</h>
     </coordinates>
@@ -99,8 +100,8 @@ RevenueMade</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>627</x>
-      <y>418</y>
+      <x>660</x>
+      <y>352</y>
       <w>55</w>
       <h>154</h>
     </coordinates>
@@ -112,8 +113,8 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>627</y>
+      <x>418</x>
+      <y>561</y>
       <w>154</w>
       <h>44</h>
     </coordinates>
@@ -125,8 +126,8 @@ m2=0..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>407</x>
-      <y>330</y>
+      <x>440</x>
+      <y>264</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -138,8 +139,8 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1034</x>
-      <y>616</y>
+      <x>1067</x>
+      <y>550</y>
       <w>143</w>
       <h>44</h>
     </coordinates>
@@ -151,8 +152,8 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>737</x>
-      <y>627</y>
+      <x>770</x>
+      <y>561</y>
       <w>154</w>
       <h>44</h>
     </coordinates>
