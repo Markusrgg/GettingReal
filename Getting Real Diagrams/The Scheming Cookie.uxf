@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>574</x>
+      <y>224</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Starbucks
+Seebladsgade 1
++4545673245
+Starbucks@mail.com
+4573829
+starbuck2
+orderHistory</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>406</x>
+      <y>224</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>0000-0000-0000-0000
+05-2026
+954
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>518</x>
+      <y>273</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>791</x>
+      <y>224</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Uncle Chuck Cookie
+0
+6$/piece
+Uncle Chuck is a....
+436 calories/piece
+62g/piece
+19g/piece
+5g/piece</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>987</x>
+      <y>231</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>22 pieces of ...
+15 pieces of ...
+001275632
+faktura</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>280</y>
+      <w>91</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>301</y>
+      <w>336</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;130.0;140.0;350.0;140.0;460.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>189</x>
+      <y>224</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>admin
+0000</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>301</y>
+      <w>315</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;120.0;150.0;340.0;150.0;430.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>119</y>
+      <w>539</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;180.0;200.0;20.0;600.0;20.0;750.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1015</x>
+      <y>56</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Order</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>56</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Cookie</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>56</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Costumer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>56</y>
+      <w>91</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>CreditCard</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>56</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Admin</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>791</x>
+      <y>455</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Cowboy Jack Cookie
+1
+7$/piece
+Cowboy Jack is a....
+529 calories/piece
+62g/piece
+30g/piece
+7g/piece</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>343</y>
+      <w>140</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;240.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>574</x>
+      <y>462</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Circle K
+Fysnke Motorvej 24A
++4522225555
+Circle.K@CircleK.net
+6533821
+circkleX
+orderHistory</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>406</x>
+      <y>455</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>1111-1111-1111-1111
+08-2024
+134
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>518</x>
+      <y>504</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>406</y>
+      <w>301</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;170.0;120.0;20.0;340.0;20.0;410.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>973</x>
+      <y>420</y>
+      <w>119</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>150 pieces of ...
+001275632
+faktura</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>875</x>
+      <y>336</y>
+      <w>126</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;160.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>322</y>
+      <w>322</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;120.0;150.0;360.0;150.0;440.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>336</y>
+      <w>588</w>
+      <h>329</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;230.0;450.0;680.0;450.0;820.0;340.0</additional_attributes>
+  </element>
+</diagram>
