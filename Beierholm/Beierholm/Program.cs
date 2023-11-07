@@ -1,4 +1,4 @@
-﻿namespace ErhvervsKonto
+﻿namespace Beierholm
 {
     internal class Program
     {
