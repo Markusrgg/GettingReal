@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>5</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1045</x>
-      <y>695</y>
-      <w>105</w>
-      <h>50</h>
+      <x>1341</x>
+      <y>1413</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>RPA
 --
@@ -18,10 +18,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1185</x>
-      <y>465</y>
-      <w>110</w>
-      <h>60</h>
+      <x>1593</x>
+      <y>999</y>
+      <w>198</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Customer
 --
@@ -36,10 +36,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1045</x>
-      <y>560</y>
-      <w>145</w>
-      <h>100</h>
+      <x>1341</x>
+      <y>1170</y>
+      <w>234</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>EIncome
 --
@@ -56,10 +56,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1355</x>
-      <y>465</y>
-      <w>100</w>
-      <h>50</h>
+      <x>1602</x>
+      <y>1170</y>
+      <w>180</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Adress
 --
@@ -72,10 +72,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1045</x>
-      <y>770</y>
-      <w>105</w>
-      <h>50</h>
+      <x>1341</x>
+      <y>1548</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 FileType
@@ -87,10 +87,10 @@ PDF</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1090</x>
-      <y>740</y>
-      <w>15</w>
-      <h>40</h>
+      <x>1422</x>
+      <y>1494</y>
+      <w>27</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
@@ -98,10 +98,10 @@ PDF</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>985</x>
-      <y>470</y>
-      <w>210</w>
-      <h>20</h>
+      <x>1233</x>
+      <y>1008</y>
+      <w>378</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-
 </panel_attributes>
@@ -110,23 +110,23 @@ PDF</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1290</x>
-      <y>475</y>
-      <w>75</w>
-      <h>20</h>
+      <x>1683</x>
+      <y>1098</y>
+      <w>36</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1</panel_attributes>
-    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1185</x>
-      <y>380</y>
-      <w>110</w>
-      <h>65</h>
+      <x>1593</x>
+      <y>846</y>
+      <w>198</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 BusinessType
@@ -141,10 +141,10 @@ ApS
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1230</x>
-      <y>440</y>
-      <w>15</w>
-      <h>35</h>
+      <x>1683</x>
+      <y>954</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
@@ -152,10 +152,10 @@ ApS
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1045</x>
-      <y>395</y>
-      <w>105</w>
-      <h>50</h>
+      <x>1341</x>
+      <y>873</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Database
 --
@@ -167,23 +167,23 @@ using db : BloggingContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1090</x>
-      <y>655</y>
-      <w>20</w>
-      <h>50</h>
+      <x>1422</x>
+      <y>1314</y>
+      <w>36</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>970</x>
-      <y>50</y>
-      <w>105</w>
-      <h>50</h>
+      <x>1206</x>
+      <y>252</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Blog
 --
@@ -195,10 +195,10 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1115</x>
-      <y>50</y>
-      <w>105</w>
-      <h>55</h>
+      <x>1467</x>
+      <y>252</y>
+      <w>189</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Post
 --
@@ -212,25 +212,25 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>460</y>
-      <w>105</w>
-      <h>50</h>
+      <x>36</x>
+      <y>990</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>WPF View
 --
 InformationDisplay
-InputField
-Button</panel_attributes>
+SearchValueEIncomeInputField
+GetEIncomeButton</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>480</y>
-      <w>110</w>
-      <h>15</h>
+      <x>216</x>
+      <y>1026</y>
+      <w>198</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
@@ -238,10 +238,10 @@ Button</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>460</y>
-      <w>205</w>
-      <h>140</h>
+      <x>396</x>
+      <y>990</y>
+      <w>369</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes>Controller
 --
@@ -264,10 +264,10 @@ ViewCustomer() : Customer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>415</y>
-      <w>335</w>
-      <h>65</h>
+      <x>756</x>
+      <y>909</y>
+      <w>603</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>650.0;10.0;60.0;10.0;60.0;110.0;10.0;110.0</additional_attributes>
@@ -275,10 +275,10 @@ ViewCustomer() : Customer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>500</x>
-      <y>200</y>
-      <w>15</w>
-      <h>640</h>
+      <x>360</x>
+      <y>522</y>
+      <w>27</w>
+      <h>1152</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;1260.0</additional_attributes>
@@ -286,10 +286,10 @@ ViewCustomer() : Customer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
-      <y>205</y>
-      <w>15</w>
-      <h>640</h>
+      <x>1260</x>
+      <y>531</y>
+      <w>27</w>
+      <h>1152</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;1260.0</additional_attributes>
@@ -297,10 +297,10 @@ ViewCustomer() : Customer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>0</y>
-      <w>345</w>
-      <h>140</h>
+      <x>1116</x>
+      <y>162</y>
+      <w>621</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -308,10 +308,10 @@ ViewCustomer() : Customer
   <element>
     <id>Text</id>
     <coordinates>
-      <x>755</x>
-      <y>215</y>
-      <w>175</w>
-      <h>40</h>
+      <x>819</x>
+      <y>549</y>
+      <w>315</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Application Layer
 fontsize=40
@@ -321,10 +321,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1140</x>
-      <y>215</y>
-      <w>175</w>
-      <h>40</h>
+      <x>1377</x>
+      <y>549</y>
+      <w>315</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Domain Layer
 fontsize=40
@@ -334,10 +334,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>305</x>
-      <y>210</y>
-      <w>175</w>
-      <h>40</h>
+      <x>9</x>
+      <y>540</y>
+      <w>315</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>UI Layer
 fontsize=40
@@ -347,10 +347,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>465</y>
-      <w>210</w>
-      <h>90</h>
+      <x>864</x>
+      <y>990</y>
+      <w>378</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>CustomerRepository
 --
@@ -370,10 +370,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>480</y>
-      <w>70</w>
-      <h>15</h>
+      <x>756</x>
+      <y>1026</y>
+      <w>126</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
@@ -381,10 +381,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>540</y>
-      <w>105</w>
-      <h>50</h>
+      <x>36</x>
+      <y>1134</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Lamda</panel_attributes>
     <additional_attributes/>
@@ -392,10 +392,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>660</x>
-      <y>655</y>
-      <w>210</w>
-      <h>130</h>
+      <x>648</x>
+      <y>1341</y>
+      <w>378</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>EIncomeRepository
 --
@@ -414,10 +414,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
-      <y>570</y>
-      <w>215</w>
-      <h>95</h>
+      <x>972</x>
+      <y>1188</y>
+      <w>387</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>410.0;10.0;10.0;10.0;10.0;170.0</additional_attributes>
@@ -425,10 +425,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>495</y>
-      <w>40</w>
-      <h>170</h>
+      <x>756</x>
+      <y>1053</y>
+      <w>72</w>
+      <h>306</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>60.0;320.0;60.0;10.0;10.0;10.0</additional_attributes>
@@ -436,10 +436,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>430</y>
-      <w>145</w>
-      <h>90</h>
+      <x>0</x>
+      <y>936</y>
+      <w>261</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>WPF CodeBehind</panel_attributes>
     <additional_attributes/>
@@ -447,10 +447,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>395</y>
-      <w>105</w>
-      <h>50</h>
+      <x>396</x>
+      <y>873</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>WPF ViewModel
 --
@@ -460,10 +460,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>400</y>
-      <w>110</w>
-      <h>80</h>
+      <x>216</x>
+      <y>882</y>
+      <w>198</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>200.0;10.0;110.0;10.0;110.0;140.0;10.0;140.0</additional_attributes>
@@ -471,10 +471,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1045</x>
-      <y>320</y>
-      <w>105</w>
-      <h>50</h>
+      <x>1341</x>
+      <y>738</y>
+      <w>189</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>WPF Model
 --
@@ -484,12 +484,34 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>335</y>
-      <w>435</w>
-      <h>80</h>
+      <x>576</x>
+      <y>765</y>
+      <w>783</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>850.0;10.0;110.0;10.0;110.0;140.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>1143</y>
+      <w>198</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>0</y>
+      <w>126</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
   </element>
 </diagram>
