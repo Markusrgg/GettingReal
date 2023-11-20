@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>530</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>*Cross Reference:*
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>570</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>*Preconditions:*
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>620</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Postconditions:*
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>530</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>-
+Se filens historik (UseCase)
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>570</y>
+      <w>340</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>-
+E-indkomst eksisterer
+Instansen Eind af E-indkomst eksisterer
+
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>620</y>
+      <w>340</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>-
+En ny instance EindList blev oprettet (instance creation) og blev associeret med CVR, periodeStart og periodeSlut (association formed)
+style=wordwrap
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>490</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>*Operation:*
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>490</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>-
+SeHistorik(CVR, periodeStart og periodeSlut)
+group=group-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>580</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Preconditions:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>640</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Postconditions:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>540</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>-
+Søg efter specifik E-Indkomst</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>580</y>
+      <w>340</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>-
+E-indkomst er hentet fra SkatDK, dataen er
+håndteret og sorteret ind i databasen.
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>640</y>
+      <w>340</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>-
+En ny instance Eind blev oprettet (instance creation) og blev associeret med CVR (association formed).
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>500</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>*Operation:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>500</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>-
+FindEIndkomst(CVR)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>540</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>*Cross Reference:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>260</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Preconditions:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>320</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Postconditions:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>220</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>-
+Se indhold i filens specifikke feltnummer
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>260</y>
+      <w>340</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>-
+E-indkomst eksisterer
+Instansen Eind af E-indkomst eksisterer
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>320</y>
+      <w>340</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>-
+Instansen Eind blev associeret med feltNr (association formed).
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>180</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>*Operation:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>180</y>
+      <w>340</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>-
+SeFeltNr(feltNr)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>220</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>*Cross Reference:*</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
