@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeierholmWPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,38 +21,42 @@ namespace BeierholmWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Controller controller;
         private ListWindow listWindow;
+
+        public MainViewModel mvm;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            controller = new Controller();
-            listWindow = new ListWindow();
-        }
+            mvm = new MainViewModel();
+            DataContext = mvm;
 
-        private void ShowEIncome_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            listWindow.ShowDialog();
-        }
-
-        private void HistoryButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            listWindow.ShowDialog();
-
+            mvm.mainWindow = this;
         }
 
         private void TextChanged(object sender, TextChangedEventArgs e)
         {
             CheckIfEmpty();
+            mvm.textBox = sender as TextBox;
+            DisableTextBoxes(mvm.textBox);
+        }
 
-            TextBox? textBox = sender as TextBox;
-            if (textBox != null)
+        private void DisableTextBoxes(TextBox textBox)
+        {
+            if (string.IsNullOrEmpty(textBox.Text))
             {
-                listWindow.ResultLabel.Content = "Resultat for søgt: " + textBox.Text;
+                InputEIncome.IsEnabled = true;
+                InputCustomerID.IsEnabled = true;
+                InputStartDate.IsEnabled = true;
+                InputEndDate.IsEnabled = true;
+            }
+            else // If the current textbox has text, disable all textboxes except the current one
+            {
+                InputEIncome.IsEnabled = (textBox == InputEIncome);
+                InputCustomerID.IsEnabled = (textBox == InputCustomerID);
+                InputStartDate.IsEnabled = (textBox == InputStartDate);
+                InputEndDate.IsEnabled = (textBox == InputEndDate);
             }
         }
 
@@ -64,74 +69,12 @@ namespace BeierholmWPF
             {
                 ShowEIncome.IsEnabled = true;
                 HistoryButton.IsEnabled = true;
-            } else
+            }
+            else
             {
                 ShowEIncome.IsEnabled = false;
                 HistoryButton.IsEnabled = false;
             }
-
-
-            //DOESN'T WORK?!?!?!?! vvvvvvv
-
-
-            //Make other fields non-typeable
-
-            //InputEIncome
-            if (InputEIncome.Text.Length > 0)
-            {
-                InputCustomerID.IsEnabled = false;
-                InputStartDate.IsEnabled = false;
-                InputEndDate.IsEnabled = false;
-            } else
-            {
-                InputCustomerID.IsEnabled = true;
-                InputStartDate.IsEnabled = true;
-                InputEndDate.IsEnabled = true;
-            }
-
-            //InputCustomerID
-            if (InputCustomerID.Text.Length > 0)
-            {
-                InputEIncome.IsEnabled = false;
-                InputStartDate.IsEnabled = false;
-                InputEndDate.IsEnabled = false;
-            }
-            else
-            {
-                InputEIncome.IsEnabled = true;
-                InputStartDate.IsEnabled = true;
-                InputEndDate.IsEnabled = true;
-                InputCustomerID.IsEnabled = true;
-            }
-
-            //InputStartDate
-            if (InputStartDate.Text.Length > 0)
-            {
-                InputEIncome.IsEnabled = false;
-                InputCustomerID.IsEnabled = false;
-                InputEndDate.IsEnabled = false;
-            }
-            else
-            {
-                InputEIncome.IsEnabled = true;
-                InputCustomerID.IsEnabled = true;
-                InputEndDate.IsEnabled = true;
-                InputStartDate.IsEnabled = true;
-            }
-
-            //InputEndDate
-            if (InputEndDate.Text.Length > 0)
-            {
-                InputEIncome.IsEnabled = false;
-                InputCustomerID.IsEnabled = false;
-                InputStartDate.IsEnabled = false;
-            }
-            else
-            {
-                InputEIncome.IsEnabled = true;
-                InputCustomerID.IsEnabled = true;
-                InputStartDate.IsEnabled = true;
-            }
         }
-    }
+     }
 }

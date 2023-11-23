@@ -7,15 +7,46 @@
         mc:Ignorable="d"
         Title="Beierholm" Height="400" Width="400" ResizeMode="NoResize">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="EIncomesList" d:ItemsSource="{d:SampleData ItemCount=10}" HorizontalAlignment="Left" Width="288" Height="244" VerticalAlignment="Top" Margin="45,41,0,0"/>
-        <Image Margin="0,0,21,-18" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Height="76" VerticalAlignment="Bottom" Opacity="0.7"/>
+        <!-- CVR: 26550688 -->
+        <ListBox x:Name="EIncomesList" ItemsSource="{Binding Selected}" HorizontalAlignment="Left" Width="288" Height="187" VerticalAlignment="Center" Margin="45,0,0,0" Grid.ColumnSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                        <Label Content="{Binding CVR}"/>
+                        <Label Content=" "/>
+                        <Label Content="{Binding PeriodStart}"/>
+                        <Label Content=" "/>
+                        <Label Content="{Binding PeriodEnd}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Image Margin="0,0,21,-18" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Height="76" VerticalAlignment="Bottom" Opacity="0.7" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Left" Margin="68,0,0,15" VerticalAlignment="Bottom" Click="Back_Click"/>
         <Button IsEnabled="False" x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="45,301,0,0" Width="126" Height="20" VerticalAlignment="Top"/>
-        <Button IsEnabled="False" x:Name="ConvertButton" Content="Download (PDF)" HorizontalAlignment="Left" Margin="213,301,0,0" Width="120" Height="20" VerticalAlignment="Top"/>
-        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Left" Margin="112,10,0,0" VerticalAlignment="Top" Width="154"/>
-        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Left" Margin="68,349,0,0" VerticalAlignment="Top" Click="Back_Click"/>
+
+        <Button IsEnabled="False" x:Name="ConvertButton" Content="Download (PDF)" HorizontalAlignment="Left" Margin="25,301,0,0" Width="120" Height="20" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Left" Margin="112,10,0,0" VerticalAlignment="Top" Width="154" Grid.ColumnSpan="2"/>
+        <ListBox Margin="45,50,0,0" HorizontalAlignment="Left" Width="288" Height="38" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                        <ListBoxItem>Skrald</ListBoxItem>
+                        <ListBoxItem>Papir</ListBoxItem>
+                        <ListBoxItem>Musik</ListBoxItem>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
     </Grid>
 </Window>

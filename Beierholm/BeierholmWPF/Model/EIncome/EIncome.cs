@@ -25,9 +25,10 @@ namespace BeierholmWPF
             this.Name = name;
         }
 
-        public EIncome(int cVR, string name, DateTime periodStart, DateTime periodEnd, DateTime createdDate, Dictionary<string, double> fields) : this(cVR, name)
+        public EIncome(int CVR, string name, DateTime periodStart, DateTime periodEnd, DateTime createdDate, Dictionary<string, double> fields) : this(CVR, name)
         {
             PeriodEnd = periodEnd;
+            PeriodStart = periodStart;
             CreatedDate = createdDate;
             Fields = fields;
         }

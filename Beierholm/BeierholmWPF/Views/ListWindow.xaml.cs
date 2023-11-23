@@ -19,12 +19,13 @@ namespace BeierholmWPF
     /// </summary>
     public partial class ListWindow : Window
     {
+        public ListViewModel lvm = new ListViewModel();
+
         public ListWindow()
         {
             InitializeComponent();
 
-            DialogResult = true;
-
+            this.DataContext = lvm;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
