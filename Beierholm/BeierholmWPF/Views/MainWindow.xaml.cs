@@ -20,9 +20,118 @@ namespace BeierholmWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Controller controller;
+        private ListWindow listWindow;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            controller = new Controller();
+            listWindow = new ListWindow();
+        }
+
+        private void ShowEIncome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            listWindow.ShowDialog();
+        }
+
+        private void HistoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            listWindow.ShowDialog();
+
+        }
+
+        private void TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CheckIfEmpty();
+
+            TextBox? textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                listWindow.ResultLabel.Content = "Resultat for søgt: " + textBox.Text;
+            }
+        }
+
+        private void CheckIfEmpty()
+        {
+            if (InputEIncome.Text != ""
+                || InputCustomerID.Text != ""
+                || InputStartDate.Text != ""
+                || InputEndDate.Text != "")
+            {
+                ShowEIncome.IsEnabled = true;
+                HistoryButton.IsEnabled = true;
+            } else
+            {
+                ShowEIncome.IsEnabled = false;
+                HistoryButton.IsEnabled = false;
+            }
+
+
+            //DOESN'T WORK?!?!?!?! vvvvvvv
+
+
+            //Make other fields non-typeable
+
+            //InputEIncome
+            if (InputEIncome.Text.Length > 0)
+            {
+                InputCustomerID.IsEnabled = false;
+                InputStartDate.IsEnabled = false;
+                InputEndDate.IsEnabled = false;
+            } else
+            {
+                InputCustomerID.IsEnabled = true;
+                InputStartDate.IsEnabled = true;
+                InputEndDate.IsEnabled = true;
+            }
+
+            //InputCustomerID
+            if (InputCustomerID.Text.Length > 0)
+            {
+                InputEIncome.IsEnabled = false;
+                InputStartDate.IsEnabled = false;
+                InputEndDate.IsEnabled = false;
+            }
+            else
+            {
+                InputEIncome.IsEnabled = true;
+                InputStartDate.IsEnabled = true;
+                InputEndDate.IsEnabled = true;
+                InputCustomerID.IsEnabled = true;
+            }
+
+            //InputStartDate
+            if (InputStartDate.Text.Length > 0)
+            {
+                InputEIncome.IsEnabled = false;
+                InputCustomerID.IsEnabled = false;
+                InputEndDate.IsEnabled = false;
+            }
+            else
+            {
+                InputEIncome.IsEnabled = true;
+                InputCustomerID.IsEnabled = true;
+                InputEndDate.IsEnabled = true;
+                InputStartDate.IsEnabled = true;
+            }
+
+            //InputEndDate
+            if (InputEndDate.Text.Length > 0)
+            {
+                InputEIncome.IsEnabled = false;
+                InputCustomerID.IsEnabled = false;
+                InputStartDate.IsEnabled = false;
+            }
+            else
+            {
+                InputEIncome.IsEnabled = true;
+                InputCustomerID.IsEnabled = true;
+                InputStartDate.IsEnabled = true;
+            }
         }
     }
 }
