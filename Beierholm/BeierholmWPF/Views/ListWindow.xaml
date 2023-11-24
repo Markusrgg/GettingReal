@@ -15,10 +15,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <!-- CVR: 26550688 -->
-        <ListBox x:Name="EIncomesList" ItemsSource="{Binding Selected}" HorizontalAlignment="Left" Width="288" Height="187" VerticalAlignment="Center" Margin="45,0,0,0" Grid.ColumnSpan="2">
+        <ListBox x:Name="EIncomesList" ItemsSource="{Binding Selected}" HorizontalAlignment="Left" Width="288" Height="213" VerticalAlignment="Top" Margin="45,68,0,0" Grid.ColumnSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                    <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
                         <Label Content="{Binding CVR}"/>
                         <Label Content=" "/>
                         <Label Content="{Binding PeriodStart}"/>
@@ -36,17 +36,5 @@
 
         <Button IsEnabled="False" x:Name="ConvertButton" Content="Download (PDF)" HorizontalAlignment="Left" Margin="25,301,0,0" Width="120" Height="20" VerticalAlignment="Top" Grid.Column="1"/>
         <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Left" Margin="112,10,0,0" VerticalAlignment="Top" Width="154" Grid.ColumnSpan="2"/>
-        <ListBox Margin="45,50,0,0" HorizontalAlignment="Left" Width="288" Height="38" VerticalAlignment="Top" Grid.ColumnSpan="2">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
-                        <ListBoxItem>Skrald</ListBoxItem>
-                        <ListBoxItem>Papir</ListBoxItem>
-                        <ListBoxItem>Musik</ListBoxItem>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-
     </Grid>
 </Window>

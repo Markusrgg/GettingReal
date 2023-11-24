@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeierholmWPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,14 @@ namespace BeierholmWPF
     /// </summary>
     public partial class ListWindow : Window
     {
-        public ListViewModel lvm = new ListViewModel();
+        public ListViewModel lvm;
 
-        public ListWindow()
+        public ListWindow(ListViewModel lvm)
         {
+            this.lvm = lvm;
+         
             InitializeComponent();
-
+         
             this.DataContext = lvm;
         }
 

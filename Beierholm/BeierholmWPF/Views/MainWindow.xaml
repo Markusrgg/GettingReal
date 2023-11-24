@@ -13,8 +13,8 @@
         </Grid.ColumnDefinitions>
         <Image Margin="0,0,10,-17" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Height="76" VerticalAlignment="Bottom" Opacity="0.7" Grid.Column="1"/>
        
-        <Button x:Name="ShowEIncome" Command="{Binding ShowEIncome}" CommandParameter="{Binding}" Content="Vis E-Indkomst" HorizontalAlignment="Left" Margin="36,190,0,0" VerticalAlignment="Top" Width="118" Grid.Column="1"/>
-        <Button x:Name="HistoryButton" Command="{Binding ShowHistory}" CommandParameter="{Binding}" Content="Historik" Margin="188,190,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Grid.Column="1"/>
+        <Button x:Name="ShowEIncome" Command="{Binding ShowEIncome}" CommandParameter="{Binding}" Content="Vis E-Indkomst" HorizontalAlignment="Left" Margin="36,190,0,0" VerticalAlignment="Top" Width="118" Grid.Column="1" Click="ShowEIncome_Click"/>
+        <Button x:Name="HistoryButton" Command="{Binding ShowHistory}" CommandParameter="{Binding}" Content="Historik" Margin="188,190,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Grid.Column="1" Click="HistoryButton_Click"/>
 
         <TextBox x:Name="InputEIncome" Text="" HorizontalAlignment="Left" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>
         <TextBox x:Name="InputCustomerID" HorizontalAlignment="Left" Margin="193,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>

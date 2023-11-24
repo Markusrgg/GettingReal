@@ -19,26 +19,33 @@ namespace BeierholmWPF.Commands
 
         public bool CanExecute(object? parameter)
         {
-            return true;
+            bool result = true;
+            if (parameter is MainViewModel mvm)
+            {
+                if (mvm.SelectedText == null || mvm.SelectedText == "")
+                {
+                    result = false;
+                }
+            }
+            return result;
         }
 
         public void Execute(object? parameter)
         {
             if (parameter is MainViewModel mvm)
             {
-                if (mvm.textBox != null)
+                switch (mvm.SelectedBox)
                 {
-                    TextBox textBox = mvm.textBox;
-                    mvm.listWindow = new ListWindow();
-                    mvm.listWindow.ResultLabel.Content = "Resultat for søgt: " + textBox.Text;
-                    mvm.listWindow.lvm.Search(textBox.Text);
-
-                    if (mvm.mainWindow != null)
-                    {
-                        mvm.mainWindow.Close();
-                    }
-
-                    mvm.listWindow.ShowDialog();
+                    case "InputEIncome":
+                        break;
+                    case "InputCustomerID":
+                        break;
+                    case "InputStartDate":
+                        break;
+                    case "InputEndDate":
+                        break;
+                    default:
+                        break;
                 }
             }
         }

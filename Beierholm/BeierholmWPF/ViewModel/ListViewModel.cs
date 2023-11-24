@@ -19,6 +19,13 @@ namespace BeierholmWPF
         public ObservableCollection<EIncome> Selected { get; set; } = new ObservableCollection<EIncome>();
         public ObservableCollection<EIncome> eIncomes { get; set; } = new ObservableCollection<EIncome>();
 
+        public ObservableCollection<string> Items { get; set; } = new ObservableCollection<string>
+        {
+            new string("Kage"),
+            new string("Lort"),
+            new string("Skuffe"),
+        };
+
         public ListViewModel()
         {
             incomeRepository.eIncomes = manager.LoadData();

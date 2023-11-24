@@ -22,29 +22,31 @@ namespace BeierholmWPF
     public partial class MainWindow : Window
     {
         private ListWindow listWindow;
-
-        public MainViewModel mvm;
+      
+        private ListViewModel lvm;
+        private MainViewModel mvm;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            mvm = new MainViewModel();
+            lvm = new ListViewModel();
+            mvm = new MainViewModel(lvm);
             DataContext = mvm;
-
-            mvm.mainWindow = this;
         }
 
         private void TextChanged(object sender, TextChangedEventArgs e)
         {
-            CheckIfEmpty();
-            mvm.textBox = sender as TextBox;
-            DisableTextBoxes(mvm.textBox);
+            TextBox? textBox = sender as TextBox;
+            mvm.SelectedText = textBox?.Text;
+            mvm.SelectedBox = textBox?.Name;
+            
+            DisableTextBoxes(textBox);
         }
 
-        private void DisableTextBoxes(TextBox textBox)
+        private void DisableTextBoxes(TextBox? textBox)
         {
-            if (string.IsNullOrEmpty(textBox.Text))
+            if (string.IsNullOrEmpty(textBox?.Text))
             {
                 InputEIncome.IsEnabled = true;
                 InputCustomerID.IsEnabled = true;
@@ -60,21 +62,32 @@ namespace BeierholmWPF
             }
         }
 
-        private void CheckIfEmpty()
+        private void ShowEIncome_Click(object sender, RoutedEventArgs e)
         {
-            if (InputEIncome.Text != ""
-                || InputCustomerID.Text != ""
-                || InputStartDate.Text != ""
-                || InputEndDate.Text != "")
+            if (mvm.SelectedText != null && mvm.SelectedText != "")
             {
-                ShowEIncome.IsEnabled = true;
-                HistoryButton.IsEnabled = true;
-            }
-            else
-            {
-                ShowEIncome.IsEnabled = false;
-                HistoryButton.IsEnabled = false;
+                listWindow = new ListWindow(lvm);
+                listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
+                listWindow.lvm.Search(mvm.SelectedText);
+
+                this.Close();
+
+                listWindow.ShowDialog();
             }
         }
-     }
+
+        private void HistoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (mvm.SelectedText != null && mvm.SelectedText != "")
+            {
+                listWindow = new ListWindow(lvm);
+                listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
+                listWindow.lvm.Search(mvm.SelectedText);
+
+                this.Close();
+
+                listWindow.ShowDialog();
+            }
+        }
+    }
 }

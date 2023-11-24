@@ -11,16 +11,18 @@ namespace BeierholmWPF.ViewModel
 {
     public class MainViewModel
     {
-        public ListWindow? listWindow;
-        public MainWindow? mainWindow;
+        public ListViewModel lvm;
 
-        public TextBox? textBox;
-
+        public string? SelectedText { get; set; }
+        public string? SelectedBox { get; set; }
         public string? Selected { get; set; }
 
         public ICommand ShowEIncome { get; set; } = new ShowEIncomeCmd();
-
         public ICommand ShowHistory { get; set; } = new ShowHistoryCmd();
 
+        public MainViewModel(ListViewModel listView)
+        {
+            lvm = listView;
+        }
     }
 }
