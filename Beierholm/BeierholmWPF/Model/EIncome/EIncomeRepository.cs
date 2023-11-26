@@ -9,13 +9,13 @@ namespace BeierholmWPF.Model.EIncome
 {
     public class EIncomeRepository //26550688
     {
-        public ObservableCollection<EIncome> eIncomes { get; set; } = new ObservableCollection<EIncome>();
+        public ObservableCollection<EIncome> EIncomes { get; set; } = new ObservableCollection<EIncome>();
 
-        public ObservableCollection<EIncome> GetEincomes(string cvr)
+        public ObservableCollection<EIncome> GetEIncomes(string cvr)
         {
             ObservableCollection<EIncome> eIn = new ObservableCollection<EIncome>();
 
-            foreach (EIncome income in eIncomes)
+            foreach (EIncome income in EIncomes)
             {
                 if (income.CVR == int.Parse(cvr))
                 {

@@ -17,24 +17,19 @@ namespace BeierholmWPF.ViewModel
         private EIncomeRepository incomeRepository = new EIncomeRepository();
         private FileManager manager = new FileManager(Directory.GetCurrentDirectory + "../../../../../Data/");
         
-        public ObservableCollection<EIncome> Selected { get; set; } = new ObservableCollection<EIncome>();
-        public ObservableCollection<EIncome> eIncomes { get; set; } = new ObservableCollection<EIncome>();
+        public ObservableCollection<EIncome> SelectedEIncomes { get; set; } = new ObservableCollection<EIncome>();
+        public ObservableCollection<EIncome> EIncomes { get; set; } = new ObservableCollection<EIncome>();
 
-        public ObservableCollection<string> Items { get; set; } = new ObservableCollection<string>
-        {
-            new string("Kage"),
-            new string("Lort"),
-            new string("Skuffe"),
-        };
+        public EIncome SelectedItem { get; set; }
 
         public ListViewModel()
         {
-            incomeRepository.eIncomes = manager.LoadData();
+            incomeRepository.EIncomes = manager.LoadData();
         }
 
         public void Search(string CVR)
         {
-            Selected = incomeRepository.GetEincomes(CVR);
+            SelectedEIncomes = incomeRepository.GetEIncomes(CVR);
         }
     }
 }

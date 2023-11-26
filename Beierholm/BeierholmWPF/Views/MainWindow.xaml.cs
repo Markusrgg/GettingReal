@@ -70,7 +70,7 @@ namespace BeierholmWPF
                 listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
                 listWindow.lvm.Search(mvm.SelectedText);
 
-                this.Close();
+                //this.Close();
 
                 listWindow.ShowDialog();
             }
@@ -84,7 +84,7 @@ namespace BeierholmWPF
                 listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
                 listWindow.lvm.Search(mvm.SelectedText);
 
-                this.Close();
+                //this.Close();
 
                 listWindow.ShowDialog();
             }
