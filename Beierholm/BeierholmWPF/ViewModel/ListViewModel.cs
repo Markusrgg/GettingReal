@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeierholmWPF.Model.EIncome;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -9,7 +10,7 @@ using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
 
-namespace BeierholmWPF
+namespace BeierholmWPF.ViewModel
 {
     public class ListViewModel
     {

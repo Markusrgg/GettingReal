@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeierholmWPF
+namespace BeierholmWPF.Model.EIncome
 {
     public class EIncomeRepository //26550688
     {

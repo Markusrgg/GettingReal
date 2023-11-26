@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeierholmWPF
+namespace BeierholmWPF.Model.Exceptions
 {
     public class NotIntException : Exception
     {

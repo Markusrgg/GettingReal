@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeierholmWPF.Model.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Navigation;
 
-namespace BeierholmWPF
+namespace BeierholmWPF.Model.EIncome
 {
     public class FileManager
     {
@@ -59,20 +60,10 @@ namespace BeierholmWPF
                                 temp++; //Increases to get next value for the specific "Feltnr".
                             }
                         }
-
-                        //DEBUG MESSAGE:
-                        //StringBuilder builder = new StringBuilder(); //Show collected data (that contains a value) - ONLY for testing!
-                        //foreach (KeyValuePair<string, double> s in collectedData)
-                        //{
-                        //    builder.AppendLine(s.ToString().Replace("[", "").Replace("]", "")); //Replace [ ] for a better look when testing :)
-                        //}
-                        //MessageBox.Show(builder.ToString());
-
                         EIncome income = new EIncome(int.Parse(fileCVR), "Name?:)", periodStart, periodEnd, createdDate, collectedData);
                         list.Add(income);
                     }
                 }
-                
             }
             return list;
         }
