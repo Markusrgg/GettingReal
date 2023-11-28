@@ -1,8 +1,10 @@
 ﻿using BeierholmWPF.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,7 +25,7 @@ namespace BeierholmWPF
     {
         private ListWindow listWindow;
         private DetailedWindow detailedWindow;
-      
+
         private ListViewModel lvm;
         private MainViewModel mvm;
         private DetailedViewModel dvm;
@@ -43,7 +45,7 @@ namespace BeierholmWPF
             TextBox? textBox = sender as TextBox;
             mvm.SelectedText = textBox?.Text;
             mvm.SelectedBox = textBox?.Name;
-            
+
             DisableTextBoxes(textBox);
         }
 
@@ -71,7 +73,9 @@ namespace BeierholmWPF
             {
                 if (InputStartDate.Text != "" && InputEndDate.Text != "")
                 {
-                    detailedWindow = new DetailedWindow();
+                    detailedWindow = new DetailedWindow(dvm);
+
+                    detailedWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
 
                     mvm.ShowEIncome.Execute(mvm);
 

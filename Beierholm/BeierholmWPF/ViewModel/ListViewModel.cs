@@ -31,7 +31,7 @@ namespace BeierholmWPF.ViewModel
                 EIncomes.Add(new EIncomeViewModel(eIncome));
             }
         }
-
+        
         public void SetSelectedEIncomes(string CVR) //26550688
         {
             SelectedEIncomes.Clear();

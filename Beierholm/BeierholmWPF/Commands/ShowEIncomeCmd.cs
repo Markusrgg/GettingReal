@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -61,8 +62,7 @@ namespace BeierholmWPF.Commands
                             }
                         } else
                         {
-                            if (mvm.SelectedText != null)
-                            {
+                            if (mvm.SelectedText != null) {
                                 mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
                             }
                         }

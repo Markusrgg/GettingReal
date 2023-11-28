@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:BeierholmWPF"
         mc:Ignorable="d"
         Title="Beierholm" Height="350" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="BorderBrush" Value="LightGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="47*"/>
@@ -15,22 +22,22 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <!-- Labels -->
-        <Label Content="Feltnr 00" Margin="64,47,64,0" Height="27" VerticalAlignment="Top" />
-        <Label Content="Feltnr 01" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="153,47,0,0" Height="27" VerticalAlignment="Top"/>
-        <Label Content="Feltnr 02" Grid.Column="1" HorizontalAlignment="Center" Margin="0,47,0,0" Height="27" VerticalAlignment="Top"/>
-        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Left" Margin="112,10,0,0" VerticalAlignment="Top" Width="154" Grid.ColumnSpan="2"/>
+        <Label Content="Feltnr 0013" Margin="34,47,82,0" Height="27" VerticalAlignment="Top" />
+        <Label Content="Feltnr 0015" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="157,47,0,0" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.901,0.404"/>
+        <Label Content="Feltnr 0016" Grid.Column="1" HorizontalAlignment="Left" Margin="85,47,0,0" Height="27" VerticalAlignment="Top"/>
 
-        <!-- TextBoxes -->
-        <TextBox x:Name="Feltnr0013" HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="{Binding DataField[0], UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="60" Height="19"/>
-        <TextBox x:Name="Feltnr0014" HorizontalAlignment="Left" Margin="159,79,0,0" TextWrapping="Wrap" Text="{Binding DataField2, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="60" Height="19" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="Feltnr0015" HorizontalAlignment="Left" Margin="78,79,0,0" TextWrapping="Wrap" Text="{Binding DataField3, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="60" Height="19" Grid.Column="1"/>
+        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Left" Margin="102,10,0,0" VerticalAlignment="Top" Width="182" Grid.ColumnSpan="2"/>
+
+        <Label x:Name="Feltnr0013" Content="{Binding DataField[0], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="25,111,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label x:Name="Feltnr0015" Content="{Binding DataField[1], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="148,111,0,0" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <Label x:Name="Feltnr0016" Content="{Binding DataField[2], UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="78,111,0,0" VerticalAlignment="Top" Width="90" Grid.Column="1"/>
 
         <!-- Images -->
         <Image Margin="0,256,21,0" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Opacity="0.7" Grid.ColumnSpan="2" Height="76" VerticalAlignment="Top"/>
 
         <!-- Buttons -->
         <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Left" Margin="131,239,0,0" VerticalAlignment="Top" Click="Back_Click" Height="20" Width="116" Grid.ColumnSpan="2"/>
-        <Button IsEnabled="False" x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="45,197,0,0" Width="126" Height="20" VerticalAlignment="Top"/>
-        <Button IsEnabled="False" x:Name="ConvertButton" Content="Download (PDF)" HorizontalAlignment="Left" Margin="25,197,0,0" Width="120" Height="20" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="45,197,0,0" Width="126" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="ConvertButton" Content="Download (PDF)" HorizontalAlignment="Left" Margin="25,197,0,0" Width="120" Height="20" VerticalAlignment="Top" Grid.Column="1"/>
     </Grid>
 </Window>

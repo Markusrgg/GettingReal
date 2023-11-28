@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,12 +22,14 @@ namespace BeierholmWPF
     /// </summary>
     public partial class DetailedWindow : Window
     {
-        public DetailedViewModel dvm = new DetailedViewModel();
-        public DetailedWindow()
+        public DetailedViewModel dvm;
+        public DetailedWindow(DetailedViewModel dvm)
         {
+            this.dvm = dvm;
+
             InitializeComponent();
 
-            DataContext = dvm;
+            this.DataContext = dvm;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
