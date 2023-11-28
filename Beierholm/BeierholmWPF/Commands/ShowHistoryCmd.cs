@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -22,9 +23,25 @@ namespace BeierholmWPF.Commands
             bool result = true;
             if (parameter is MainViewModel mvm)
             {
-                if (mvm.SelectedText == null || mvm.SelectedText == "")
+                if (mvm?.SelectedStartDate == null || mvm?.SelectedStartDate == null)
                 {
                     result = false;
+                }
+                if (mvm?.SelectedEndDate == null || mvm?.SelectedEndDate == null)
+                {
+                    result = false;
+                }
+                if (mvm?.SelectedText == null || mvm.SelectedText == "")
+                {
+                    result = false;
+                }
+                else
+                {
+                    result = true;
+                }
+                if (mvm?.SelectedStartDate != null && mvm?.SelectedEndDate != null)
+                {
+                    result = true;
                 }
             }
             return result;

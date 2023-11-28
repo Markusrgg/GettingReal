@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,21 +18,30 @@ namespace BeierholmWPF.ViewModel
     public class ListViewModel
     {
         private EIncomeRepository incomeRepository = new EIncomeRepository();
-        private FileManager manager = new FileManager(Directory.GetCurrentDirectory + "../../../../../Data/");
-        
-        public ObservableCollection<EIncome> SelectedEIncomes { get; set; } = new ObservableCollection<EIncome>();
-        public ObservableCollection<EIncome> EIncomes { get; set; } = new ObservableCollection<EIncome>();
+        //  private FileManager manager = new FileManager(Directory.GetCurrentDirectory + "../../../../../Data/");
 
-        public EIncome SelectedItem { get; set; }
+        public ObservableCollection<EIncomeViewModel> SelectedEIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
+        public ObservableCollection<EIncomeViewModel> EIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
 
-        public ListViewModel()
-        {
-            incomeRepository.EIncomes = manager.LoadData();
+        public EIncomeViewModel SelectedItem { get; set; }
+
+        public ListViewModel() {
+            foreach (EIncome eIncome in incomeRepository.EIncomes)
+            {
+                EIncomes.Add(new EIncomeViewModel(eIncome));
+            }
         }
 
-        public void Search(string CVR)
+        public void SetSelectedEIncomes(string CVR) //26550688
         {
-            SelectedEIncomes = incomeRepository.GetEIncomes(CVR);
+            SelectedEIncomes.Clear();
+            foreach (EIncomeViewModel evm in EIncomes)
+            {
+                if (evm.CVR == int.Parse(CVR))
+                {
+                    SelectedEIncomes.Add(evm);
+                }
+            }
         }
     }
 }

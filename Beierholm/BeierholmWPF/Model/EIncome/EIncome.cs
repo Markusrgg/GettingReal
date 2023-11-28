@@ -15,7 +15,6 @@ namespace BeierholmWPF.Model.EIncome
         public DateTime CreatedDate { get; set; }
         public Dictionary<string, double> Fields { get; set; } = new Dictionary<string, double>();
 
-
         public EIncome(int cvr) { 
             CVR = cvr;
         }

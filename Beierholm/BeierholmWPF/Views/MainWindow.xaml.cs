@@ -22,16 +22,19 @@ namespace BeierholmWPF
     public partial class MainWindow : Window
     {
         private ListWindow listWindow;
+        private DetailedWindow detailedWindow;
       
         private ListViewModel lvm;
         private MainViewModel mvm;
+        private DetailedViewModel dvm;
 
         public MainWindow()
         {
             InitializeComponent();
 
             lvm = new ListViewModel();
-            mvm = new MainViewModel(lvm);
+            dvm = new DetailedViewModel();
+            mvm = new MainViewModel(lvm, dvm);
             DataContext = mvm;
         }
 
@@ -57,8 +60,8 @@ namespace BeierholmWPF
             {
                 InputEIncome.IsEnabled = (textBox == InputEIncome);
                 InputCustomerID.IsEnabled = (textBox == InputCustomerID);
-                InputStartDate.IsEnabled = (textBox == InputStartDate);
-                InputEndDate.IsEnabled = (textBox == InputEndDate);
+                //InputStartDate.IsEnabled = (textBox == InputStartDate);
+                //InputEndDate.IsEnabled = (textBox == InputEndDate);
             }
         }
 
@@ -66,13 +69,23 @@ namespace BeierholmWPF
         {
             if (mvm.SelectedText != null && mvm.SelectedText != "")
             {
-                listWindow = new ListWindow(lvm);
-                listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
-                listWindow.lvm.Search(mvm.SelectedText);
+                if (InputStartDate.Text != "" && InputEndDate.Text != "")
+                {
+                    detailedWindow = new DetailedWindow();
 
-                //this.Close();
+                    mvm.ShowEIncome.Execute(mvm);
 
-                listWindow.ShowDialog();
+                    detailedWindow.ShowDialog();
+                }
+                else
+                {
+                    listWindow = new ListWindow(lvm);
+                    listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
+
+                    mvm.ShowEIncome.Execute(mvm);
+
+                    listWindow.ShowDialog();
+                }
             }
         }
 
@@ -82,12 +95,21 @@ namespace BeierholmWPF
             {
                 listWindow = new ListWindow(lvm);
                 listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
-                listWindow.lvm.Search(mvm.SelectedText);
 
-                //this.Close();
+                mvm.ShowHistory.Execute(mvm);
 
                 listWindow.ShowDialog();
             }
+        }
+
+        private void InputStartDateSelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mvm.SelectedStartDate = InputStartDate.SelectedDate;
+        }
+
+        private void InputEndDateSelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mvm.SelectedEndDate = InputEndDate.SelectedDate;
         }
     }
 }

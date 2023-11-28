@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <!-- Images -->
         <Image Margin="0,0,10,-17" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Height="76" VerticalAlignment="Bottom" Opacity="0.7" Grid.Column="1"/>
-       
+
         <!-- Buttons -->
         <Button x:Name="ShowEIncome" Command="{Binding ShowEIncome}" CommandParameter="{Binding}" Content="Vis E-Indkomst" HorizontalAlignment="Left" Margin="36,190,0,0" VerticalAlignment="Top" Width="118" Grid.Column="1" Click="ShowEIncome_Click"/>
         <Button x:Name="HistoryButton" Command="{Binding ShowHistory}" CommandParameter="{Binding}" Content="Historik" Margin="188,190,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Grid.Column="1" Click="HistoryButton_Click"/>
@@ -21,8 +21,8 @@
         <!-- TextBoxes -->
         <TextBox x:Name="InputEIncome" Text="" HorizontalAlignment="Left" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>
         <TextBox x:Name="InputCustomerID" HorizontalAlignment="Left" Margin="193,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>
-        <TextBox x:Name="InputStartDate" HorizontalAlignment="Left" Margin="193,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>
-        <TextBox x:Name="InputEndDate" HorizontalAlignment="Left" Margin="10,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>
+        <!--<TextBox x:Name="InputStartDate" HorizontalAlignment="Left" Margin="193,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>-->
+        <!--<TextBox x:Name="InputEndDate" DatePicker.SelectedDateChanged="InputEndDate_SelectedDateChanged"  HorizontalAlignment="Left" Margin="10,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>-->
 
         <!-- Labels -->
         <Label Content="Søg på E-Indkomst" HorizontalAlignment="Left" Margin="121,26,0,0" VerticalAlignment="Top" Grid.Column="1"/>
@@ -30,5 +30,9 @@
         <Label Content="Kunde nr." HorizontalAlignment="Left" Margin="188,63,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.312,0.464"/>
         <Label Content="Start dato" HorizontalAlignment="Left" Margin="5,115,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.312,0.464"/>
         <Label Content="Slut dato" HorizontalAlignment="Left" Margin="188,115,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.312,0.464"/>
+
+        <!-- DatePicker -->
+        <DatePicker x:Name="InputStartDate" SelectedDateChanged="InputStartDateSelectedDateChanged" Grid.Column="1" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Width="134"/>
+        <DatePicker x:Name="InputEndDate" SelectedDateChanged="InputEndDateSelectedDateChanged" Grid.Column="1" HorizontalAlignment="Left" Margin="193,141,0,0" VerticalAlignment="Top" Width="129"/>
     </Grid>
 </Window>
