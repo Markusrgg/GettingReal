@@ -47,6 +47,6 @@
         <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Right" Margin="0,0,4,53" Click="Back_Click" Width="126" Grid.Row="1" Height="20" VerticalAlignment="Bottom"/>
         <Button IsEnabled="False" x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="16,0,0,53" Width="120" Grid.Row="1" Grid.Column="1" Height="20" VerticalAlignment="Bottom"/>
         <Button IsEnabled="False" x:Name="ConvertButton" Content="Download (PDF)" HorizontalAlignment="Left" Margin="16,0,0,88" Width="120" Height="20" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1"/>
-        <Button x:Name="ShowEIncomeData" Command="{Binding ShowEIncomeData}" CommandParameter="{Binding}" Content="Åben EIncome" HorizontalAlignment="Right" Margin="0,0,4,88" VerticalAlignment="Bottom" RenderTransformOrigin="-0.042,-0.113" Width="126" Grid.Row="1" Height="20"/>
+        <Button x:Name="ShowEIncomeData" Command="{Binding ShowEIncomeData}" CommandParameter="{Binding}" Content="Åben EIncome" HorizontalAlignment="Right" Margin="0,0,4,88" VerticalAlignment="Bottom" RenderTransformOrigin="-0.042,-0.113" Width="126" Grid.Row="1" Height="20" Click="ShowEIncomeData_Click"/>
     </Grid>
 </Window>

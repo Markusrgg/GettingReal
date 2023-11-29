@@ -34,7 +34,7 @@ namespace BeierholmWPF.Commands
         {
             if (parameter is ListViewModel lvm)
             {
-                MessageBox.Show($"Field 0013: {lvm.SelectedItem.Fields["0013"]}\nField 0015: {lvm.SelectedItem.Fields["0015"]}\nField 0016: {lvm.SelectedItem.Fields["0016"]}");
+                //MessageBox.Show($"Field 0013: {lvm.SelectedItem.Fields["0013"]}\nField 0015: {lvm.SelectedItem.Fields["0015"]}\nField 0016: {lvm.SelectedItem.Fields["0016"]}");
             }
         }
     }
