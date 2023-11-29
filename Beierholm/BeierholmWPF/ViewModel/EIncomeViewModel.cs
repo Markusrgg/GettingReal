@@ -24,6 +24,7 @@ namespace BeierholmWPF.ViewModel
             Name = eIncome.Name;
             PeriodStart = eIncome.PeriodStart;
             PeriodEnd = eIncome.PeriodEnd;
+            CreatedDate = eIncome.CreatedDate;
             Fields = eIncome.Fields;
         }
     }

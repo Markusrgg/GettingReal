@@ -1,4 +1,5 @@
-﻿using BeierholmWPF.Model.EIncome;
+﻿using BeierholmWPF.Commands;
+using BeierholmWPF.Model.EIncome;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -43,5 +44,7 @@ namespace BeierholmWPF.ViewModel
                 }
             }
         }
+        public ICommand ShowEIncomeData { get; set; } = new ShowEIncomeDataCmd();
+
     }
 }

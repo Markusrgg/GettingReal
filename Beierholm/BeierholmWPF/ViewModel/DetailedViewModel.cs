@@ -55,6 +55,22 @@ namespace BeierholmWPF.ViewModel
             }
         }
 
+        public List<EIncomeViewModel> GetEIncomes(string CVR, DateTime? startDate, DateTime? endDate)
+        {
+            List<EIncomeViewModel> sortedEIncome = new List<EIncomeViewModel>();
+            foreach (EIncomeViewModel evm in EIncomes)
+            {
+                if (evm.CVR == int.Parse(CVR))
+                {
+                    if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                    {
+                        sortedEIncome.Add(evm);
+                    }
+                }
+            }
+            return sortedEIncome;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

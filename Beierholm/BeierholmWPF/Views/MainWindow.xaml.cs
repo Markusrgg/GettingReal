@@ -69,27 +69,33 @@ namespace BeierholmWPF
 
         private void ShowEIncome_Click(object sender, RoutedEventArgs e)
         {
+            bool check = true;
             if (mvm.SelectedText != null && mvm.SelectedText != "")
             {
-                if (InputStartDate.Text != "" && InputEndDate.Text != "")
+                if (check == true && InputStartDate.Text != "" && InputEndDate.Text != "")
                 {
-                    detailedWindow = new DetailedWindow(dvm);
+                    int count = dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count;
+                    if (count == 1) 
+                    {
+                        check = false;
+                        detailedWindow = new DetailedWindow(dvm);
 
-                    detailedWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
+                        detailedWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
 
-                    mvm.ShowEIncome.Execute(mvm);
+                        mvm.ShowEIncome.Execute(mvm);
 
-                    detailedWindow.ShowDialog();
+                        detailedWindow.ShowDialog();
+                    }
                 }
-                else
-                {
-                    listWindow = new ListWindow(lvm);
-                    listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
+            }
+            if (mvm.SelectedText != null && mvm.SelectedText != "" && check)
+            {
+                listWindow = new ListWindow(lvm);
+                listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
 
-                    mvm.ShowEIncome.Execute(mvm);
+                mvm.ShowEIncome.Execute(mvm);
 
-                    listWindow.ShowDialog();
-                }
+                listWindow.ShowDialog();
             }
         }
 
