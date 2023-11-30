@@ -1,4 +1,5 @@
-﻿using BeierholmWPF.Model.EIncome;
+﻿using BeierholmWPF.Commands;
+using BeierholmWPF.Model.EIncome;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 
 namespace BeierholmWPF.ViewModel
 {
@@ -24,9 +26,10 @@ namespace BeierholmWPF.ViewModel
                 OnPropertyChanged();
             }
         }
+        public ICommand Download { get; set; } = new DownloadCmd();
+        public ICommand DownloadPDF { get; set; } = new DownloadPDFCmd();
 
-
-        private EIncomeViewModel EIncome { get; set; }
+        public EIncomeViewModel EIncome { get; set; }
         public ObservableCollection<EIncomeViewModel> EIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
         private EIncomeRepository incomeRepository = new EIncomeRepository();
 
@@ -46,10 +49,7 @@ namespace BeierholmWPF.ViewModel
                 {
                     if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
                     {
-                        DataField[0] = evm.Fields["0013"];
-                        DataField[1] = evm.Fields["0015"];
-                        DataField[2] = evm.Fields["0016"];
-                        break;
+                        this.EIncome = evm;
                     }
                 }
             }

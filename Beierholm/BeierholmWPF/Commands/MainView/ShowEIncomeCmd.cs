@@ -25,32 +25,32 @@ namespace BeierholmWPF.Commands
             bool result = true;
             if (parameter is MainViewModel mvm)
             {
-                if (mvm?.SelectedStartDate == null || mvm?.SelectedStartDate == null)
-                {
-                    result = false;
-                }
-                if (mvm?.SelectedEndDate == null || mvm?.SelectedEndDate == null)
-                {
-                    result = false;
-                }
                 if (mvm?.SelectedText == null || mvm.SelectedText == "")
                 {
                     result = false;
-                } else
+                }
+                else
                 {
                     result = true;
+                    bool isInt = int.TryParse(mvm.SelectedText, out int value);
+                    if (!isInt) 
+                    {
+                        result = false;
+                    }
                 }
                 if (mvm?.SelectedStartDate != null && mvm?.SelectedEndDate != null)
                 {
                     result = true;
                 }
+
             }
             return result;
         }
 
         public void Execute(object? parameter)
         {
-            if (parameter is MainViewModel mvm) {
+            if (parameter is MainViewModel mvm)
+            {
                 switch (mvm.SelectedBox)
                 {
                     case "InputEIncome":
@@ -60,19 +60,24 @@ namespace BeierholmWPF.Commands
                             {
                                 mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);
                             }
-                        } else
+                        }
+                        else
                         {
-                            if (mvm.SelectedText != null) {
+                            if (mvm.SelectedText != null)
+                            {
                                 mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
                             }
                         }
                         break;
-                    case "InputCustomerID":
+                    case "InputEndDate":
+
+                    case "InputStartDate":
+                        if (mvm.SelectedText == null && mvm.SelectedStartDate != null && mvm.SelectedEndDate != null)
+                        {
+                            mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);
+                        }
                         break;
-                    //case "InputStartDate":
-                    //    break;
-                    //case "InputEndDate":
-                        break;
+
                     default:
                         break;
                 }

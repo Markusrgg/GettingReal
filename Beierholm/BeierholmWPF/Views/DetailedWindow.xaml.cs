@@ -26,7 +26,6 @@ namespace BeierholmWPF
         public DetailedWindow(DetailedViewModel dvm)
         {
             this.dvm = dvm;
-
             InitializeComponent();
 
             this.DataContext = dvm;

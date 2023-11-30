@@ -17,6 +17,7 @@ namespace BeierholmWPF.ViewModel
         public DateTime CreatedDate { get; set; }
         public Dictionary<string, double> Fields { get; set; } = new Dictionary<string, double>();
 
+
         public EIncomeViewModel(EIncome eIncome)
         {
             this.EIncome = eIncome;

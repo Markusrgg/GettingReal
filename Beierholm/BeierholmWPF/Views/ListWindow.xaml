@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeierholmWPF"
         mc:Ignorable="d"
-        Title="Beierholm" Height="430" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Beierholm" Height="410" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <!-- CVR: 26550688 -->
         <!-- Labels -->
@@ -33,12 +33,10 @@
         </ListBox>
 
         <!-- Images -->
-        <Image Margin="0,0,21,-18" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Opacity="0.7" Height="76" VerticalAlignment="Bottom"/>
+        <Image Margin="217,0,0,-12" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Left" Width="212" Opacity="0.7" Height="76" VerticalAlignment="Bottom"/>
 
         <!-- Buttons -->
-        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Right" Margin="0,331,249,0" Click="Back_Click" Width="126" Height="20" VerticalAlignment="Top"/>
-        <Button IsEnabled="False" x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="241,331,0,0" Width="120" Height="20" VerticalAlignment="Top"/>
-        <Button IsEnabled="False" x:Name="ConvertButton" Content="Download (PDF)" HorizontalAlignment="Left" Margin="241,296,0,0" Width="120" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Right" Margin="0,296,64,0" Click="Back_Click" Width="126" Height="20" VerticalAlignment="Top"/>
         <Button x:Name="ShowEIncomeData" Command="{Binding ShowEIncomeData}" CommandParameter="{Binding}" Content="Åben EIncome" HorizontalAlignment="Right" Margin="0,296,249,0" VerticalAlignment="Top" RenderTransformOrigin="-0.042,-0.113" Width="126" Height="20" Click="ShowEIncomeData_Click"/>
     </Grid>
 </Window>

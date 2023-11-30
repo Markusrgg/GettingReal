@@ -44,6 +44,10 @@ namespace BeierholmWPF.ViewModel
                 }
             }
         }
+        public void SetSelectedEIncomes(DateTime? start, DateTime? end)
+        {
+
+        }
         public ICommand ShowEIncomeData { get; set; } = new ShowEIncomeDataCmd();
 
     }
