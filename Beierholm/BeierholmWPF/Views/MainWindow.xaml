@@ -28,7 +28,7 @@
         <Label Content="Slut dato" HorizontalAlignment="Left" Margin="212,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.312,0.464"/>
 
         <!-- DatePicker -->
-        <DatePicker x:Name="InputStartDate" SelectedDateChanged="InputStartDateSelectedDateChanged" HorizontalAlignment="Left" Margin="34,141,0,0" VerticalAlignment="Top" Width="134"/>
-        <DatePicker x:Name="InputEndDate" SelectedDateChanged="InputEndDateSelectedDateChanged" HorizontalAlignment="Left" Margin="217,141,0,0" VerticalAlignment="Top" Width="134"/>
+        <DatePicker x:Name="InputStartDate" Text="{Binding SelectedStartDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=False, TargetNullValue=''}" SelectedDateChanged="InputStartDateSelectedDateChanged" HorizontalAlignment="Left" Margin="34,141,0,0" VerticalAlignment="Top" Width="134"/>
+        <DatePicker x:Name="InputEndDate" Text="{Binding SelectedEndDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=False, TargetNullValue=''}" SelectedDateChanged="InputEndDateSelectedDateChanged" HorizontalAlignment="Left" Margin="217,141,0,0" VerticalAlignment="Top" Width="134"/>
     </Grid>
 </Window>

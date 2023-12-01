@@ -25,15 +25,15 @@ namespace BeierholmWPF.Commands
             bool result = true;
             if (parameter is MainViewModel mvm)
             {
-                if (mvm?.SelectedText == null || mvm.SelectedText == "")
+                if (mvm?.SelectedText == null || mvm?.SelectedText == "")
                 {
                     result = false;
                 }
                 else
                 {
                     result = true;
-                    bool isInt = int.TryParse(mvm.SelectedText, out int value);
-                    if (!isInt) 
+                    bool isInt = int.TryParse(mvm?.SelectedText, out int value);
+                    if (!isInt)
                     {
                         result = false;
                     }
@@ -41,8 +41,15 @@ namespace BeierholmWPF.Commands
                 if (mvm?.SelectedStartDate != null && mvm?.SelectedEndDate != null)
                 {
                     result = true;
+                    if (mvm?.SelectedText != null && mvm?.SelectedText.Length > 0)
+                    {
+                        bool isInt = int.TryParse(mvm?.SelectedText, out int value);
+                        if (!isInt)
+                        {
+                            result = false;
+                        }
+                    }
                 }
-
             }
             return result;
         }
@@ -63,14 +70,20 @@ namespace BeierholmWPF.Commands
                         }
                         else
                         {
-                            if (mvm.SelectedText != null)
+                            if (mvm.SelectedText != null && mvm.SelectedText != "")
                             {
-                                mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
+                                if (mvm.dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count <= 1)
+                                {
+                                    mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
+                                }
+                                else
+                                {
+                                    mvm.lvm.SetSelectedEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
+                                }
                             }
                         }
                         break;
                     case "InputEndDate":
-
                     case "InputStartDate":
                         if (mvm.SelectedText == null && mvm.SelectedStartDate != null && mvm.SelectedEndDate != null)
                         {

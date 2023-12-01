@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,13 +27,14 @@ namespace BeierholmWPF.ViewModel
 
         public EIncomeViewModel SelectedItem { get; set; }
 
-        public ListViewModel() {
+        public ListViewModel()
+        {
             foreach (EIncome eIncome in incomeRepository.EIncomes)
             {
                 EIncomes.Add(new EIncomeViewModel(eIncome));
             }
         }
-        
+
         public void SetSelectedEIncomes(string CVR) //26550688
         {
             SelectedEIncomes.Clear();
@@ -44,11 +46,31 @@ namespace BeierholmWPF.ViewModel
                 }
             }
         }
-        public void SetSelectedEIncomes(DateTime? start, DateTime? end)
+
+        public void SetSelectedEIncomes(string CVR, DateTime? startDate, DateTime? endDate)
         {
-
+            SelectedEIncomes.Clear();
+            foreach (EIncomeViewModel evm in EIncomes)
+            {
+                if (int.Parse(CVR) == evm.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                {
+                    SelectedEIncomes.Add(evm);
+                }
+            }
         }
-        public ICommand ShowEIncomeData { get; set; } = new ShowEIncomeDataCmd();
 
+        public void SetSelectedEIncomes(DateTime? startDate, DateTime? endDate)
+        {
+            SelectedEIncomes.Clear();
+            foreach (EIncomeViewModel evm in EIncomes)
+            {
+                if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                {
+                    SelectedEIncomes.Add(evm);
+                }
+            }
+        }
+
+        public ICommand ShowEIncomeData { get; set; } = new ShowEIncomeDataCmd();
     }
 }
