@@ -5,38 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeierholmWPF"
         mc:Ignorable="d"
-        Title="Beierholm" Height="410" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Beierholm" Height="410" Width="550" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <!-- CVR: 26550688 -->
+        
+            <!-- CVR: 26550688 -->
         <!-- Labels -->
-        <Label Content="CVR" Margin="0,47,310,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Right" Width="74" />
-        <Label Content="Start Dato" Margin="0,47,249,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Right" Width="63"/>
-        <Label Content="Slut Dato" Margin="212,47,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="58"/>
-        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Width="154" Height="26"/>
-        <Label Content="EInkomst Oprettet" Margin="0,48,40,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="108"/>
+        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Left" Margin="161,17,0,0" VerticalAlignment="Top" Width="262" Height="26"/>
+        
+        <!-- ListView -->
 
-        <!-- ListBoxes -->
-        <ListBox x:Name="EIncomesList" ItemsSource="{Binding SelectedEIncomes}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" Width="378" Height="213" VerticalAlignment="Top" Margin="0,68,0,0">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                        <Label Content="{Binding CVR}"/>
-                        <Label Content="    "/>
-                        <Label Content="{Binding PeriodStart}"/>
-                        <Label Content="    "/>
-                        <Label Content="{Binding PeriodEnd}"/>
-                        <Label Content="    "/>
-                        <Label Content="{Binding CreatedDate}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <ListView x:Name="EIncomesList" ItemsSource="{Binding SelectedEIncomes}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" Height="213" VerticalAlignment="Top" Margin="0,68,0,0" HorizontalContentAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Navn" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="CVR" DisplayMemberBinding="{Binding CVR}"/>
+                    <GridViewColumn Header="Start Dato" DisplayMemberBinding="{Binding PeriodStart,StringFormat='dd-MM-yyyy'}"/>
+                    <GridViewColumn Header="Slut Dato" DisplayMemberBinding="{Binding PeriodEnd,StringFormat='dd-MM-yyyy'}"/>
+                    <GridViewColumn Header="Enkomst Oprettet" DisplayMemberBinding="{Binding CreatedDate, StringFormat='dd-MM-yyyy HH:mm:ss'}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
         <!-- Images -->
-        <Image Margin="217,0,0,-12" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Left" Width="212" Opacity="0.7" Height="76" VerticalAlignment="Bottom"/>
+        <Image Margin="328,0,0,-17" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Left" Width="212" Opacity="0.7" Height="76" VerticalAlignment="Bottom"/>
 
         <!-- Buttons -->
-        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Right" Margin="0,296,64,0" Click="Back_Click" Width="126" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="ShowEIncomeData" Command="{Binding ShowEIncomeData}" CommandParameter="{Binding}" Content="Åben EIncome" HorizontalAlignment="Right" Margin="0,296,249,0" VerticalAlignment="Top" RenderTransformOrigin="-0.042,-0.113" Width="126" Height="20" Click="ShowEIncomeData_Click"/>
+        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Right" Margin="0,296,101,0" Click="Back_Click" Width="126" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="ShowEIncomeData" Command="{Binding ShowEIncomeData}" CommandParameter="{Binding}" Content="Åben EIncome" HorizontalAlignment="Right" Margin="0,296,320,0" VerticalAlignment="Top" RenderTransformOrigin="-0.042,-0.113" Width="126" Height="20" Click="ShowEIncomeData_Click"/>
     </Grid>
 </Window>

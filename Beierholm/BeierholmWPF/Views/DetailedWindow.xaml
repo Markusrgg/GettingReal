@@ -12,19 +12,29 @@
     <Grid>
         <!-- Labels -->
 
-        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="182"/>
-        <Label Content="Felt Navn" HorizontalAlignment="Left" Margin="98,46,0,0" VerticalAlignment="Top"/>
-        <Label Content="Felt Indhold" HorizontalAlignment="Center" Margin="45,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="173"/>
+       
+        <Label x:Name="NameLabel" Content="Firma Navn: " HorizontalAlignment="Left" Margin="106,36,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label Content="{Binding EIncome.Name}" HorizontalAlignment="Left" Margin="184,36,0,0" VerticalAlignment="Top" Width="178"/>
 
         <!-- Images -->
         <Image Margin="0,256,21,0" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Opacity="0.7" Height="76" VerticalAlignment="Top"/>
 
         <!-- Buttons -->
-        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Left" Margin="131,239,0,0" VerticalAlignment="Top" Click="Back_Click" Height="20" Width="116"/>
-        <Button x:Name="DownloadButton" Content="Download" Command="{Binding Download}" HorizontalAlignment="Left" Margin="45,197,0,0" Width="126" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="ConvertButton" Content="Download (PDF)" Command="{Binding DownloadPDF}" HorizontalAlignment="Left" Margin="213,197,0,0" Width="120" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="Back" Content="Tilbage" HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" Click="Back_Click" Height="20" Width="116"/>
+        <Button x:Name="DownloadButton" Content="Download" Command="{Binding Download}" HorizontalAlignment="Left" Margin="57,207,0,0" Width="126" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="ConvertButton" Content="Download (PDF)" Command="{Binding DownloadPDF}" HorizontalAlignment="Left" Margin="213,207,0,0" Width="120" Height="20" VerticalAlignment="Top"/>
 
-        <ListBox ItemsSource="{Binding EIncome.Fields}" Margin="87,72,87,144">
+        <ListView ItemsSource="{Binding EIncome.Fields}" Margin="110,67,110,132" HorizontalContentAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Felt Navn" DisplayMemberBinding="{Binding Key}"/>
+                    <GridViewColumn Header="Felt Indhold" DisplayMemberBinding="{Binding Value}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!--<ListBox ItemsSource="{Binding EIncome.Fields}" Margin="87,84,87,132">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
@@ -39,6 +49,6 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-        </ListBox>
+        </ListBox>-->
     </Grid>
 </Window>

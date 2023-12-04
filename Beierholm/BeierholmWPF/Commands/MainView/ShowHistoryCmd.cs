@@ -23,25 +23,49 @@ namespace BeierholmWPF.Commands
             bool result = true;
             if (parameter is MainViewModel mvm)
             {
-                if (mvm?.SelectedStartDate == null || mvm?.SelectedStartDate == null)
-                {
-                    result = false;
-                }
-                if (mvm?.SelectedEndDate == null || mvm?.SelectedEndDate == null)
-                {
-                    result = false;
-                }
-                if (mvm?.SelectedText == null || mvm.SelectedText == "")
+                bool isInt = false;
+                if (mvm?.SelectedText == null || mvm?.SelectedText == "")
                 {
                     result = false;
                 }
                 else
                 {
                     result = true;
+                    isInt = int.TryParse(mvm?.SelectedText, out int value);
+                    if (!isInt)
+                    {
+                        result = false;
+                    }
                 }
                 if (mvm?.SelectedStartDate != null && mvm?.SelectedEndDate != null)
                 {
                     result = true;
+                    if (mvm?.SelectedText != null && mvm?.SelectedText.Length > 0)
+                    {
+                        isInt = int.TryParse(mvm?.SelectedText, out int value);
+                        if (!isInt)
+                        {
+                            result = false;
+                        }
+                    }
+                }
+                if (isInt)
+                {
+                    foreach (EIncomeViewModel eIncome in mvm.lvm.EIncomes)
+                    {
+                        if (eIncome != null)
+                        {
+                            if (eIncome.CVR != int.Parse(mvm.SelectedText)) // || CHECK KUNDENR.
+                            {
+                                result = false;
+                            }
+                            else
+                            {
+                                result = true;
+                                break;
+                            }
+                        }
+                    }
                 }
             }
             return result;
