@@ -43,6 +43,7 @@ namespace BeierholmWPF.ViewModel
 
         public void SetDataFields(string cvr, DateTime? startDate, DateTime? endDate)
         {
+            EIncome = null;
             foreach (EIncomeViewModel evm in EIncomes)
             {
                 if (evm.CVR == int.Parse(cvr))

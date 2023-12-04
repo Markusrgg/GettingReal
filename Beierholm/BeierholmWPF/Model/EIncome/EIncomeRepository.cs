@@ -20,20 +20,6 @@ namespace BeierholmWPF.Model.EIncome
             InitializeRepository();
         }
 
-        //public ObservableCollection<EIncome> GetEIncomes(string cvr)
-        //{
-        //    ObservableCollection<EIncome> eIn = new ObservableCollection<EIncome>();
-
-        //    foreach (EIncome income in EIncomes)
-        //    {
-        //        if (income.CVR == int.Parse(cvr))
-        //        {
-        //            eIn.Add(income);
-        //        }
-        //    }
-        //    return eIn;
-        //}
-
         public void InitializeRepository()
         {
             foreach (FileInfo file in GetAllFiles("*.csv")) //Get only .csv files!
@@ -49,6 +35,7 @@ namespace BeierholmWPF.Model.EIncome
                         string[] EIncome = read.ReadLine().Split(";");
 
                         string fileCVR = fieldData[2];
+                        string name = fieldData[4];
                         DateTime periodStart = ConvertFromString(fieldData[5]);
                         DateTime periodEnd = ConvertFromString(fieldData[6]);
 
@@ -58,11 +45,11 @@ namespace BeierholmWPF.Model.EIncome
                         DateTime createdDate = ConvertFromString(date, time);
 
                         int temp = 0; //Temp created to get next value for the next field name. 
-                        foreach (string name in fieldNames) //The dynamic part!
+                        foreach (string field in fieldNames) //The dynamic part!
                         {
-                            if (name.Contains("Feltnr"))
+                            if (field.Contains("Feltnr"))
                             {
-                                string[] split = name.Split(" "); //Collects only the field value e.g "Feltnr 0012" = "0012"
+                                string[] split = field.Split(" "); //Collects only the field value e.g "Feltnr 0012" = "0012"
                                 int next = 8 + temp; //8 = First "Feltnr" from the file.   temp = next field e.g (8 + 1) = "Feltnr" 9 etc.
 
                                 if (fieldData[next] != null && fieldData[next] != "")
@@ -73,7 +60,7 @@ namespace BeierholmWPF.Model.EIncome
                                 temp++; //Increases to get next value for the specific "Feltnr".
                             }
                         }
-                        EIncome income = new EIncome(int.Parse(fileCVR), "Name?:)", periodStart, periodEnd, createdDate, collectedData);
+                        EIncome income = new EIncome(int.Parse(fileCVR), name, periodStart, periodEnd, createdDate, collectedData);
                         EIncomes.Add(income);
                     }
                 }

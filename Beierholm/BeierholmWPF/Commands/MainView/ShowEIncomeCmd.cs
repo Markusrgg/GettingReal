@@ -25,6 +25,7 @@ namespace BeierholmWPF.Commands
             bool result = true;
             if (parameter is MainViewModel mvm)
             {
+                bool isInt = false;
                 if (mvm?.SelectedText == null || mvm?.SelectedText == "")
                 {
                     result = false;
@@ -32,7 +33,7 @@ namespace BeierholmWPF.Commands
                 else
                 {
                     result = true;
-                    bool isInt = int.TryParse(mvm?.SelectedText, out int value);
+                    isInt = int.TryParse(mvm?.SelectedText, out int value);
                     if (!isInt)
                     {
                         result = false;
@@ -43,10 +44,27 @@ namespace BeierholmWPF.Commands
                     result = true;
                     if (mvm?.SelectedText != null && mvm?.SelectedText.Length > 0)
                     {
-                        bool isInt = int.TryParse(mvm?.SelectedText, out int value);
+                        isInt = int.TryParse(mvm?.SelectedText, out int value);
                         if (!isInt)
                         {
                             result = false;
+                        }
+                    }
+                }
+                if (isInt)
+                {
+                    foreach (EIncomeViewModel eIncome in mvm.lvm.EIncomes)
+                    {
+                        if (eIncome != null)
+                        {
+                            if (eIncome.CVR != int.Parse(mvm.SelectedText)) // || CHECK KUNDENR.
+                            {
+                                result = false;
+                            } else
+                            {
+                                result = true;
+                                break;
+                            }
                         }
                     }
                 }
@@ -68,20 +86,24 @@ namespace BeierholmWPF.Commands
                                 mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);
                             }
                         }
-                        else
+                        else if (mvm.SelectedText != null && mvm.SelectedText.Length > 0)
                         {
-                            if (mvm.SelectedText != null && mvm.SelectedText != "")
+                            if (mvm.dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count <= 1)
                             {
-                                if (mvm.dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count <= 1)
-                                {
-                                    mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
-                                }
-                                else
-                                {
-                                    mvm.lvm.SetSelectedEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
-                                }
+                                mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
+                            }
+                            else
+                            {
+                                mvm.lvm.SetSelectedEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
                             }
                         }
+                        else
+                        {
+                            mvm.lvm.SetSelectedEIncomes(mvm?.SelectedStartDate, mvm?.SelectedEndDate);
+                        }
+                        break;
+                    case "InputCustomerID":
+                        //DO STUFF HERE. :)
                         break;
                     case "InputEndDate":
                     case "InputStartDate":

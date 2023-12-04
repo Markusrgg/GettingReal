@@ -86,7 +86,7 @@ namespace BeierholmWPF
                 if (InputStartDate.Text != "" && InputEndDate.Text != "")
                 {
                     int count = dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count;
-                    if (count == 1) 
+                    if (count == 1)
                     {
                         check = false;
                         detailedWindow = new DetailedWindow(dvm);
@@ -109,7 +109,7 @@ namespace BeierholmWPF
                     }
                 }
             }
-            if (check && mvm.SelectedText == null || mvm.SelectedText == "")
+            if (check && mvm.SelectedText == null || check && mvm?.SelectedText.Length < 1)
             {
                 listWindow = new ListWindow(lvm);
                 listWindow.ResultLabel.Content = $"Resultat for søgt: {mvm.SelectedStartDate} - {mvm.SelectedEndDate}";
