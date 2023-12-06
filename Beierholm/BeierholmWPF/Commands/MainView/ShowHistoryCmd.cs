@@ -1,4 +1,5 @@
-﻿using BeierholmWPF.ViewModel;
+﻿using BeierholmWPF.Model;
+using BeierholmWPF.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace BeierholmWPF.Commands
 {
     public class ShowHistoryCmd : ICommand
     {
+        Utility utility = new Utility();
+
         public event EventHandler? CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
@@ -20,52 +23,17 @@ namespace BeierholmWPF.Commands
 
         public bool CanExecute(object? parameter)
         {
-            bool result = true;
+            bool result = false;
             if (parameter is MainViewModel mvm)
             {
                 bool isInt = false;
-                if (mvm?.SelectedText == null || mvm?.SelectedText == "")
-                {
-                    result = false;
-                }
-                else
+                if (mvm?.SelectedText != null || mvm?.SelectedText != "")
                 {
                     result = true;
-                    isInt = int.TryParse(mvm?.SelectedText, out int value);
-                    if (!isInt)
-                    {
-                        result = false;
-                    }
                 }
                 if (mvm?.SelectedStartDate != null && mvm?.SelectedEndDate != null)
                 {
                     result = true;
-                    if (mvm?.SelectedText != null && mvm?.SelectedText.Length > 0)
-                    {
-                        isInt = int.TryParse(mvm?.SelectedText, out int value);
-                        if (!isInt)
-                        {
-                            result = false;
-                        }
-                    }
-                }
-                if (isInt)
-                {
-                    foreach (EIncomeViewModel eIncome in mvm.lvm.EIncomes)
-                    {
-                        if (eIncome != null)
-                        {
-                            if (eIncome.CVR != int.Parse(mvm.SelectedText)) // || CHECK KUNDENR.
-                            {
-                                result = false;
-                            }
-                            else
-                            {
-                                result = true;
-                                break;
-                            }
-                        }
-                    }
                 }
             }
             return result;
@@ -78,12 +46,22 @@ namespace BeierholmWPF.Commands
                 switch (mvm.SelectedBox)
                 {
                     case "InputEIncome":
-                        break;
                     case "InputCustomerID":
-                        break;
                     case "InputStartDate":
-                        break;
                     case "InputEndDate":
+                        bool check = mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);
+                        if (!check)
+                        {
+                            string s = mvm.SelectedBox == "InputEIncome" ? "CVR" : "Kundenr";
+                            if (mvm.SelectedText.Length < 8 && s == "CVR")
+                            {
+                                MessageBox.Show("Et CVR har 8 tal");
+                            }
+                            else
+                            {
+                                MessageBox.Show($"{s}: '{mvm.SelectedText}' findes ikke i systemet");
+                            }
+                        }
                         break;
                     default:
                         break;

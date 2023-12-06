@@ -38,24 +38,6 @@ namespace BeierholmWPF.Commands
                 {
                     result = true;
                 }
-                if (result)
-                {
-                    if (mvm?.SelectedText != null && mvm?.SelectedText.Length > 0)
-                    {
-                        isInt = int.TryParse(mvm?.SelectedText, out int value);
-                        if (mvm?.SelectedText.Length > 8 && mvm.SelectedBox == "InputEIncome")
-                        {
-                            result = false;
-                            string final = utility.RemovePastMax(mvm.SelectedText);
-                            mvm.SelectedText = final;
-                            MessageBox.Show("Forkert input! Maks. 8 tal er acceperet.");
-                        }
-                        if (!isInt)
-                        {
-                            result = false;
-                        }
-                    }
-                }
             }
             return result;
         }
@@ -108,7 +90,7 @@ namespace BeierholmWPF.Commands
                         break;
                     case "InputEndDate":
                     case "InputStartDate":
-                        if (mvm.SelectedText == null && mvm.SelectedStartDate != null && mvm.SelectedEndDate != null)
+                        if (mvm.SelectedText.Length < 1 && mvm.SelectedStartDate != null && mvm.SelectedEndDate != null)
                         {
                             mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);
                         }

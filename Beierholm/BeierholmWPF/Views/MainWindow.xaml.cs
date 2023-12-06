@@ -53,7 +53,8 @@ namespace BeierholmWPF
                 if (Char.IsDigit(c))
                 {
                     final += c;
-                } else
+                }
+                else
                 {
                     string error = "Forkert input. Kun tal accepteret.";
                     MessageBox.Show(error);
@@ -64,7 +65,8 @@ namespace BeierholmWPF
                 final = textBox.Text.Substring(0, 8);
                 mvm.SelectedText = final;
                 MessageBox.Show("Forkert input! Maks. 8 tal er accepteret.");
-            } else if (final.Length > 3 && textBox.Name == "InputCostumerID")
+            }
+            else if (final.Length > 3 && textBox.Name == "InputCustomerID")
             {
                 final = textBox.Text.Substring(0, 3);
                 mvm.SelectedText = final;
@@ -102,20 +104,29 @@ namespace BeierholmWPF
             {
                 foreach (EIncomeViewModel evm in mvm.lvm.EIncomes)
                 {
-                    if (evm.CVR == int.Parse(mvm?.SelectedText))
+                    if (mvm?.SelectedText.Length > 0 && evm.CVR == int.Parse(mvm?.SelectedText))
+                    {
+                        canRun = true;
+                    }
+                }
+                if (!canRun && mvm.SelectedText.Length == 1)
+                {
+                    MessageBox.Show($"Et CVR har 8 tal.");
+                }
+            }
+            if (mvm.SelectedBox == "InputCustomerID")
+            {
+                foreach (CustomerViewModel c in mvm.lvm.Customers)
+                {
+                    if (mvm?.SelectedText.Length > 0 && c.GetCustomerID() == int.Parse(mvm?.SelectedText))
                     {
                         canRun = true;
                     }
                 }
             }
-            if (mvm.SelectedBox == "InputCustomerID") {
-                foreach (CustomerViewModel c in mvm.lvm.Customers)
-                {
-                    if (c.GetCustomerID() == int.Parse(mvm?.SelectedText))
-                    {
-                        canRun = true;
-                    }
-                }
+            if (mvm.SelectedText.Length < 1 && mvm.SelectedStartDate != null && mvm.SelectedEndDate != null)
+            {
+                canRun = true;
             }
 
             bool check = true;
@@ -150,7 +161,11 @@ namespace BeierholmWPF
             if (canRun && check && mvm.SelectedText == null || canRun && check && mvm?.SelectedText.Length < 1)
             {
                 listWindow = new ListWindow(lvm);
-                listWindow.ResultLabel.Content = $"Resultat for søgt: {mvm.SelectedStartDate} - {mvm.SelectedEndDate}";
+                string format = "dd-MM-yyyy";
+                string start = mvm.SelectedStartDate.Value.ToString("dd-MM-yyyy");
+                string end = mvm.SelectedEndDate.Value.ToString("dd-MM-yyyy");
+
+                listWindow.ResultLabel.Content = $"Resultat for søgt: {start} - {end}";
 
                 mvm.ShowEIncome.Execute(mvm);
 
@@ -170,7 +185,36 @@ namespace BeierholmWPF
 
         private void HistoryButton_Click(object sender, RoutedEventArgs e)
         {
-            if (mvm.SelectedText != null && mvm.SelectedText != "")
+            bool canRun = false;
+            if (mvm.SelectedBox == "InputEIncome")
+            {
+                foreach (EIncomeViewModel evm in mvm.lvm.EIncomes)
+                {
+                    if (mvm?.SelectedText.Length > 0 && evm.CVR == int.Parse(mvm?.SelectedText))
+                    {
+                        canRun = true;
+                    }
+                }
+                if (!canRun && mvm.SelectedText.Length == 1)
+                {
+                    MessageBox.Show($"Et CVR har 8 tal.");
+                }
+            }
+            if (mvm.SelectedBox == "InputCustomerID")
+            {
+                foreach (CustomerViewModel c in mvm.lvm.Customers)
+                {
+                    if (mvm?.SelectedText.Length > 0 && c.GetCustomerID() == int.Parse(mvm?.SelectedText))
+                    {
+                        canRun = true;
+                    }
+                }
+            }
+            if (mvm.SelectedText.Length < 1 && mvm.SelectedStartDate != null && mvm.SelectedEndDate != null)
+            {
+                canRun = true;
+            }
+            if (canRun && mvm.SelectedText != null && mvm.SelectedText != "")
             {
                 listWindow = new ListWindow(lvm);
                 listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;

@@ -47,14 +47,17 @@ namespace BeierholmWPF.ViewModel
             bool outcome = false;
             SelectedEIncomes.Clear();
 
-            Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));
-            foreach (EIncomeViewModel evm in EIncomes)
+            if (input.Length > 0)
             {
-                if (evm.CVR == int.Parse(input) ||
-                    c != null && evm.CVR == c.CVR)
+                Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));
+                foreach (EIncomeViewModel evm in EIncomes)
                 {
-                    SelectedEIncomes.Add(evm);
-                    outcome = true;
+                    if (evm.CVR == u.StringToInt(input) ||
+                        c != null && evm.CVR == c.CVR)
+                    {
+                        SelectedEIncomes.Add(evm);
+                        outcome = true;
+                    }
                 }
             }
             return outcome;
@@ -64,14 +67,17 @@ namespace BeierholmWPF.ViewModel
         {
             bool outcome = false;
             SelectedEIncomes.Clear();
-            Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));
-            foreach (EIncomeViewModel evm in EIncomes)
+            if (input.Length > 0)
             {
-                if (c != null && evm.CVR == c.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd || 
-                    int.Parse(input) == evm.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));
+                foreach (EIncomeViewModel evm in EIncomes)
                 {
-                    SelectedEIncomes.Add(evm);
-                    outcome = true;
+                    if (c != null && evm.CVR == c.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd ||
+                        u.StringToInt(input) == evm.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                    {
+                        SelectedEIncomes.Add(evm);
+                        outcome = true;
+                    }
                 }
             }
             return outcome;

@@ -29,6 +29,11 @@ namespace BeierholmWPF.ViewModel
             CreatedDate = eIncome.CreatedDate;
             Fields = eIncome.Fields;
 
+            CreateDataTabel();
+        }
+
+        public void CreateDataTabel()
+        {
             int i = 0;
             double[] objects = new double[Fields.Count];
             DataRow row = DT.NewRow();
@@ -38,8 +43,8 @@ namespace BeierholmWPF.ViewModel
                 row[i] = kv.Value;
                 i++;
             }
+            DT.Rows.Clear();
             DT.Rows.Add(row);
-
         }
     }
 }

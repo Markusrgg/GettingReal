@@ -55,16 +55,19 @@ namespace BeierholmWPF.ViewModel
         {
             bool outcome = false;
             EIncome = null;
-            Customer c = fm.CustomerRepository.GetCustomer(utility.StringToInt(input));
-            foreach (EIncomeViewModel evm in EIncomes)
+            if (input.Length > 0)
             {
-                if (evm.CVR == int.Parse(input) ||
-                    c != null && evm.CVR == c.CVR)
+                Customer c = fm.CustomerRepository.GetCustomer(utility.StringToInt(input));
+                foreach (EIncomeViewModel evm in EIncomes)
                 {
-                    if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                    if (evm.CVR == int.Parse(input) ||
+                        c != null && evm.CVR == c.CVR)
                     {
-                        EIncome = evm;
-                        outcome = true;
+                        if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                        {
+                            EIncome = evm;
+                            outcome = true;
+                        }
                     }
                 }
             }
