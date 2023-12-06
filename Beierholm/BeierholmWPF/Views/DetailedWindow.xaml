@@ -33,6 +33,10 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <DataGrid ItemsSource="{Binding EIncome.DT}">
+           
+            
+        </DataGrid>
 
 
 
