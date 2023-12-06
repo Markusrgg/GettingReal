@@ -16,7 +16,7 @@
 
         <!-- TextBoxes -->
         <TextBox x:Name="InputEIncome" Text="" HorizontalAlignment="Left" Margin="34,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="18" TextChanged="TextChanged"/>
-        <TextBox x:Name="InputCustomerID" HorizontalAlignment="Left" Margin="217,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" TextChanged="TextChanged"/>
+        <TextBox x:Name="InputCostumerID" HorizontalAlignment="Left" Margin="217,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" TextChanged="TextChanged"/>
         <!--<TextBox x:Name="InputStartDate" HorizontalAlignment="Left" Margin="193,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>-->
         <!--<TextBox x:Name="InputEndDate" DatePicker.SelectedDateChanged="InputEndDate_SelectedDateChanged"  HorizontalAlignment="Left" Margin="10,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>-->
 
@@ -26,6 +26,8 @@
         <Label Content="Kunde nr." HorizontalAlignment="Left" Margin="212,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.312,0.464"/>
         <Label Content="Start dato" HorizontalAlignment="Left" Margin="29,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.312,0.464"/>
         <Label Content="Slut dato" HorizontalAlignment="Left" Margin="212,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.312,0.464"/>
+        <Label Content="{Binding ErrorMessageCVR, UpdateSourceTrigger=PropertyChanged}" Foreground="RED" FontSize="8" HorizontalAlignment="Left" Margin="66,65,0,0" VerticalAlignment="Top" Width="102" Height="21"/>
+        <Label Content="{Binding ErrorMessageCostumerID, UpdateSourceTrigger=PropertyChanged}" Foreground="RED" FontSize="8" HorizontalAlignment="Left" Margin="272,65,0,0" VerticalAlignment="Top" Width="79" Height="21"/>
 
         <!-- DatePicker -->
         <DatePicker x:Name="InputStartDate" Text="{Binding SelectedStartDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=False, TargetNullValue=''}" SelectedDateChanged="InputStartDateSelectedDateChanged" HorizontalAlignment="Left" Margin="34,141,0,0" VerticalAlignment="Top" Width="134"/>

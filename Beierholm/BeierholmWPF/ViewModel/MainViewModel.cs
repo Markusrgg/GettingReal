@@ -1,7 +1,10 @@
 ﻿using BeierholmWPF.Commands;
+using BeierholmWPF.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
@@ -9,11 +12,21 @@ using System.Windows.Input;
 
 namespace BeierholmWPF.ViewModel
 {
-    public class MainViewModel
+    public class MainViewModel : INotifyPropertyChanged
     {
         public ListViewModel lvm;
         public DetailedViewModel dvm;
-        public string? SelectedText { get; set; }
+
+        private string selectedText = "";
+        public string? SelectedText {
+            get { return selectedText; } 
+            set
+            {
+                selectedText = value;
+                OnPropertyChanged();
+            }
+        }
+
         public DateTime? SelectedStartDate { get; set; }
         public DateTime? SelectedEndDate { get; set; }
         public string? SelectedBox { get; set; }
@@ -26,6 +39,12 @@ namespace BeierholmWPF.ViewModel
         {
             lvm = listView;
             this.dvm = dvm;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

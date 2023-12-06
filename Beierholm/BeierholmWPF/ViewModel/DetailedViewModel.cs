@@ -1,5 +1,6 @@
 ﻿using BeierholmWPF.Commands;
-using BeierholmWPF.Model.EIncome;
+using BeierholmWPF.Model.Customers;
+using BeierholmWPF.Model.EIncomes;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -31,17 +32,24 @@ namespace BeierholmWPF.ViewModel
 
         public EIncomeViewModel EIncome { get; set; }
         public ObservableCollection<EIncomeViewModel> EIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
-        private EIncomeRepository incomeRepository = new EIncomeRepository();
+        public ObservableCollection<CustomerViewModel> Customers { get; set; } = new ObservableCollection<CustomerViewModel>();
+
+        private FileManager fm = new FileManager();
 
         public DetailedViewModel()
         {
-            foreach (EIncome eIncome in incomeRepository.EIncomes)
+            foreach (Customer customer in fm.CustomerRepository.GetCustomers())
             {
-                EIncomes.Add(new EIncomeViewModel(eIncome));
+                foreach (EIncome eIncome in customer.EIncomes)
+                {
+                    EIncomes.Add(new EIncomeViewModel(eIncome));
+
+                }
+                Customers.Add(new CustomerViewModel(customer));
             }
         }
 
-        public void SetDataFields(string cvr, DateTime? startDate, DateTime? endDate)
+        public void SetDataFieldsByCVR(string cvr, DateTime? startDate, DateTime? endDate)
         {
             EIncome = null;
             foreach (EIncomeViewModel evm in EIncomes)
@@ -50,7 +58,25 @@ namespace BeierholmWPF.ViewModel
                 {
                     if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
                     {
-                        this.EIncome = evm;
+                        EIncome = evm;
+                    }
+                }
+            }
+        }
+
+        public void SetDataFieldsByCustomerID(string customerID, DateTime? startDate, DateTime? endDate)
+        {
+            EIncome = null;
+            foreach (CustomerViewModel cvm in Customers)
+            {
+                if (cvm.GetCustomerID() == int.Parse(customerID))
+                {
+                    foreach (EIncome eincome in cvm.EIncomes)
+                    {
+                        if (startDate <= eincome.PeriodStart && endDate >= eincome.PeriodEnd)
+                        {
+                            EIncome = new EIncomeViewModel(eincome);
+                        }
                     }
                 }
             }

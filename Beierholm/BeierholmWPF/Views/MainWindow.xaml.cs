@@ -1,4 +1,5 @@
-﻿using BeierholmWPF.ViewModel;
+﻿using BeierholmWPF.Model;
+using BeierholmWPF.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,19 +44,34 @@ namespace BeierholmWPF
         private void TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox? textBox = sender as TextBox;
-            mvm.SelectedText = textBox?.Text;
             mvm.SelectedBox = textBox?.Name;
-            //if (mvm.SelectedBox == "InputEIncome" && textBox?.Text.Length < 1)
-            //{
-            //    if (mvm.SelectedStartDate != null)
-            //    {
-            //        mvm.SelectedBox = "InputStartDate";
-            //    }
-            //    if (mvm.SelectedEndDate != null)
-            //    {
-            //        mvm.SelectedBox = "InputEndDate";
-            //    }
-            //}
+
+            string final = "";
+            foreach (char c in textBox.Text)
+            {
+                if (Char.IsDigit(c))
+                {
+                    final += c;
+                } else
+                {
+                    string error = "Forkert input. Kun tal accepteret.";
+                    MessageBox.Show(error);
+                }
+            }
+            if (final.Length > 8 && textBox.Name == "InputEIncome")
+            {
+                final = textBox.Text.Substring(0, 8);
+                mvm.SelectedText = final;
+                MessageBox.Show("Forkert input! Maks. 8 tal er accepteret.");
+            } else if (final.Length > 3 && textBox.Name == "InputCostumerID")
+            {
+                final = textBox.Text.Substring(0, 3);
+                mvm.SelectedText = final;
+                MessageBox.Show("Forkert input! Maks. 3 tal er accepteret.");
+            }
+            mvm.SelectedText = final;
+            textBox.Text = final;
+            textBox.Select(textBox.Text.Length, 0);
 
             DisableTextBoxes(textBox);
         }
@@ -65,14 +81,14 @@ namespace BeierholmWPF
             if (string.IsNullOrEmpty(textBox?.Text))
             {
                 InputEIncome.IsEnabled = true;
-                InputCustomerID.IsEnabled = true;
+                InputCostumerID.IsEnabled = true;
                 InputStartDate.IsEnabled = true;
                 InputEndDate.IsEnabled = true;
             }
             else // If the current textbox has text, disable all textboxes except the current one
             {
                 InputEIncome.IsEnabled = (textBox == InputEIncome);
-                InputCustomerID.IsEnabled = (textBox == InputCustomerID);
+                InputCostumerID.IsEnabled = (textBox == InputCostumerID);
                 //InputStartDate.IsEnabled = (textBox == InputStartDate);
                 //InputEndDate.IsEnabled = (textBox == InputEndDate);
             }

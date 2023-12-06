@@ -1,5 +1,4 @@
-﻿using BeierholmWPF.Model.EIncome;
-using BeierholmWPF.ViewModel;
+﻿using BeierholmWPF.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -47,7 +47,7 @@ namespace BeierholmWPF
                 detailedWindow = new DetailedWindow(dvm);
 
                 detailedWindow.ResultLabel.Content = "Resultat for søgt: " + lvm.SelectedItem.CVR;
-                dvm.SetDataFields(lvm.SelectedItem.CVR.ToString(), lvm.SelectedItem.PeriodStart, lvm.SelectedItem.PeriodEnd);
+                dvm.SetDataFieldsByCVR(lvm.SelectedItem.CVR.ToString(), lvm.SelectedItem.PeriodStart, lvm.SelectedItem.PeriodEnd);
 
                 detailedWindow.ShowDialog();
 

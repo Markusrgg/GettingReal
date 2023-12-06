@@ -1,4 +1,6 @@
-﻿using BeierholmWPF.ViewModel;
+﻿using BeierholmWPF.Model;
+using BeierholmWPF.Model.EIncomes;
+using BeierholmWPF.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO.MemoryMappedFiles;
@@ -14,6 +16,8 @@ namespace BeierholmWPF.Commands
 {
     public class ShowEIncomeCmd : ICommand
     {
+        private Utility utility = new Utility();
+
         public event EventHandler? CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
@@ -22,49 +26,33 @@ namespace BeierholmWPF.Commands
 
         public bool CanExecute(object? parameter)
         {
-            bool result = true;
+            bool result = false;
             if (parameter is MainViewModel mvm)
             {
                 bool isInt = false;
-                if (mvm?.SelectedText == null || mvm?.SelectedText == "")
-                {
-                    result = false;
-                }
-                else
+                if (mvm?.SelectedText != null || mvm?.SelectedText != "")
                 {
                     result = true;
-                    isInt = int.TryParse(mvm?.SelectedText, out int value);
-                    if (!isInt)
-                    {
-                        result = false;
-                    }
                 }
                 if (mvm?.SelectedStartDate != null && mvm?.SelectedEndDate != null)
                 {
                     result = true;
+                }
+                if (result)
+                {
                     if (mvm?.SelectedText != null && mvm?.SelectedText.Length > 0)
                     {
                         isInt = int.TryParse(mvm?.SelectedText, out int value);
+                        if (mvm?.SelectedText.Length > 8 && mvm.SelectedBox == "InputEIncome")
+                        {
+                            result = false;
+                            string final = utility.RemovePastMax(mvm.SelectedText);
+                            mvm.SelectedText = final;
+                            MessageBox.Show("Forkert input! Maks. 8 tal er acceperet.");
+                        }
                         if (!isInt)
                         {
                             result = false;
-                        }
-                    }
-                }
-                if (isInt)
-                {
-                    foreach (EIncomeViewModel eIncome in mvm.lvm.EIncomes)
-                    {
-                        if (eIncome != null)
-                        {
-                            if (eIncome.CVR != int.Parse(mvm.SelectedText)) // || CHECK KUNDENR.
-                            {
-                                result = false;
-                            } else
-                            {
-                                result = true;
-                                break;
-                            }
                         }
                     }
                 }
@@ -90,7 +78,7 @@ namespace BeierholmWPF.Commands
                         {
                             if (mvm.dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count <= 1)
                             {
-                                mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
+                                mvm.dvm.SetDataFieldsByCVR(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
                             }
                             else
                             {
@@ -102,8 +90,8 @@ namespace BeierholmWPF.Commands
                             mvm.lvm.SetSelectedEIncomes(mvm?.SelectedStartDate, mvm?.SelectedEndDate);
                         }
                         break;
-                    case "InputCustomerID":
-                        //DO STUFF HERE. :)
+                    case "InputCostumerID":
+                        mvm.dvm.SetDataFieldsByCustomerID(mvm?.SelectedText, mvm?.SelectedStartDate, mvm?.SelectedEndDate);
                         break;
                     case "InputEndDate":
                     case "InputStartDate":

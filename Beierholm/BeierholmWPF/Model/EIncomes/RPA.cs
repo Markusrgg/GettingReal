@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeierholmWPF.Model.EIncome
+namespace BeierholmWPF.Model.EIncomes
 {
     public class RPA
     {

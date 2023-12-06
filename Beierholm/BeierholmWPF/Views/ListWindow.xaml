@@ -7,8 +7,6 @@
         mc:Ignorable="d"
         Title="Beierholm" Height="410" Width="550" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
-            <!-- CVR: 26550688 -->
         <!-- Labels -->
         <Label x:Name="ResultLabel" Content="Resultat for søgt: 'result'" HorizontalAlignment="Left" Margin="161,17,0,0" VerticalAlignment="Top" Width="262" Height="26"/>
         

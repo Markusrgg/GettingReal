@@ -1,5 +1,6 @@
 ﻿using BeierholmWPF.Commands;
-using BeierholmWPF.Model.EIncome;
+using BeierholmWPF.Model.Customers;
+using BeierholmWPF.Model.EIncomes;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,19 +20,23 @@ namespace BeierholmWPF.ViewModel
 {
     public class ListViewModel
     {
-        private EIncomeRepository incomeRepository = new EIncomeRepository();
-        //  private FileManager manager = new FileManager(Directory.GetCurrentDirectory + "../../../../../Data/");
+        private FileManager fm = new FileManager();
 
         public ObservableCollection<EIncomeViewModel> SelectedEIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
         public ObservableCollection<EIncomeViewModel> EIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
+        public ObservableCollection<CustomerViewModel> Customers { get; set; } = new ObservableCollection<CustomerViewModel>();
 
         public EIncomeViewModel SelectedItem { get; set; }
 
         public ListViewModel()
         {
-            foreach (EIncome eIncome in incomeRepository.EIncomes)
+            foreach (Customer customer in fm.CustomerRepository.GetCustomers())
             {
-                EIncomes.Add(new EIncomeViewModel(eIncome));
+                foreach (EIncome eIncome in customer.EIncomes)
+                {
+                    EIncomes.Add(new EIncomeViewModel(eIncome));
+                }
+                Customers.Add(new CustomerViewModel(customer));
             }
         }
 

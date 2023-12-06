@@ -1,4 +1,4 @@
-﻿using BeierholmWPF.Model.EIncome;
+﻿using BeierholmWPF.Model.EIncomes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,6 @@ namespace BeierholmWPF.ViewModel
         public DateTime PeriodEnd { get; set; }
         public DateTime CreatedDate { get; set; }
         public Dictionary<string, double> Fields { get; set; } = new Dictionary<string, double>();
-
 
         public EIncomeViewModel(EIncome eIncome)
         {

@@ -1,4 +1,6 @@
-﻿using BeierholmWPF.Model.Exceptions;
+﻿using BeierholmWPF.Model.Customers;
+using BeierholmWPF.Model.Enums;
+using BeierholmWPF.Model.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,16 +8,19 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Navigation;
 
-namespace BeierholmWPF.Model.EIncome
+namespace BeierholmWPF.Model.EIncomes
 {
-    public class EIncomeRepository //26550688
+    public class FileManager
     {
+        public Utility utility = new Utility();
+        public EIncomeRepository EIncomeRepository = new EIncomeRepository();
+        public CustomerRepository CustomerRepository = new CustomerRepository();
         private string FilePath { get; set; } = Directory.GetCurrentDirectory + "../../../../../Data/";
-        public ObservableCollection<EIncome> EIncomes { get; set; } = new ObservableCollection<EIncome>();
 
-
-        public EIncomeRepository()
+        public FileManager()
         {
             InitializeRepository();
         }
@@ -24,6 +29,7 @@ namespace BeierholmWPF.Model.EIncome
         {
             foreach (FileInfo file in GetAllFiles("*.csv")) //Get only .csv files!
             {
+                int costumerID = 0;
                 using (StreamReader read = new StreamReader(FilePath + file.Name)) //The new stuff where it automatically closes read again.
                 {
                     if (read != null)
@@ -44,7 +50,7 @@ namespace BeierholmWPF.Model.EIncome
                         string time = EIncome[2].Substring(29, 9); //29, 9 = 09:23:18
                         DateTime createdDate = ConvertFromString(date, time);
 
-                        int temp = 0; //Temp created to get next value for the next field name. 
+                        int temp = 0; //Temp created to get next value for the next field name.
                         foreach (string field in fieldNames) //The dynamic part!
                         {
                             if (field.Contains("Feltnr"))
@@ -54,14 +60,28 @@ namespace BeierholmWPF.Model.EIncome
 
                                 if (fieldData[next] != null && fieldData[next] != "")
                                 {
-                                    double data = StringToDouble(fieldData[next]);
+                                    double data = utility.StringToDouble(fieldData[next]);
                                     collectedData.Add($"{split[1].Replace(" ", "")}", data);
                                 }
                                 temp++; //Increases to get next value for the specific "Feltnr".
                             }
                         }
                         EIncome income = new EIncome(int.Parse(fileCVR), name, periodStart, periodEnd, createdDate, collectedData);
-                        EIncomes.Add(income);
+                        EIncomeRepository.AddEIncome(income);
+
+                        Customer cu = CustomerRepository.GetCustomer(costumerID);
+                        if (cu == null)
+                        {
+                            Customer costumer = new Customer(name, costumerID, int.Parse(fileCVR), BusinessType.ApS);
+
+                            CustomerRepository.AddCustomer(costumer);
+                            CustomerRepository.AddCustomerEIncome(costumer, income);
+                            costumerID++;
+                        }
+                        else
+                        {
+                            CustomerRepository.AddCustomerEIncome(cu, income);
+                        }
                     }
                 }
             }
@@ -69,8 +89,8 @@ namespace BeierholmWPF.Model.EIncome
 
         private DateTime ConvertFromString(string period)
         {
-            int year = StringToInt(period.Substring(0, 4));
-            int month = StringToInt(period.Substring(4, 2));
+            int year = utility.StringToInt(period.Substring(0, 4));
+            int month = utility.StringToInt(period.Substring(4, 2));
 
             DateTime datetime = new DateTime(year, month, 1);
 
@@ -82,36 +102,26 @@ namespace BeierholmWPF.Model.EIncome
             string[] split = date.Split(".");
             string[] split2 = time.Split(":");
 
-            int year = StringToInt(split[0]);
-            int month = StringToInt(split[1]);
-            int day = StringToInt(split[2]);
+            int year = utility.StringToInt(split[0]);
+            int month = utility.StringToInt(split[1]);
+            int day = utility.StringToInt(split[2]);
 
-            int hour = StringToInt(split2[0]);
-            int minute = StringToInt(split2[1]);
-            int second = StringToInt(split2[2]);
+            int hour = utility.StringToInt(split2[0]);
+            int minute = utility.StringToInt(split2[1]);
+            int second = utility.StringToInt(split2[2]);
 
             DateTime dateTime = new DateTime(year, month, day, hour, minute, second);
 
             return dateTime;
         }
 
-        public FileInfo[] GetAllFiles(string type)
+        private FileInfo[] GetAllFiles(string type)
         {
             DirectoryInfo d = new DirectoryInfo(FilePath);
 
             FileInfo[] files = d.GetFiles(type);
 
             return files;
-        }
-
-        private int StringToInt(string str)
-        {
-            return int.TryParse(str, out int i) == true ? i : throw new NotIntException("Not an int!");
-        }
-
-        private double StringToDouble(string str)
-        {
-            return double.TryParse(str, out double i) == true ? i : throw new NotDoubleException("Not a double!");
         }
     }
 }
