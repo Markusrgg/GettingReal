@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeierholmWPF", "BeierholmWPF\BeierholmWPF.csproj", "{50956425-02FE-43DB-8ABE-4A0E48F56DCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{FBEFF028-FF84-454E-948A-07F5C4B93D46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{50956425-02FE-43DB-8ABE-4A0E48F56DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50956425-02FE-43DB-8ABE-4A0E48F56DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50956425-02FE-43DB-8ABE-4A0E48F56DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBEFF028-FF84-454E-948A-07F5C4B93D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBEFF028-FF84-454E-948A-07F5C4B93D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBEFF028-FF84-454E-948A-07F5C4B93D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBEFF028-FF84-454E-948A-07F5C4B93D46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
