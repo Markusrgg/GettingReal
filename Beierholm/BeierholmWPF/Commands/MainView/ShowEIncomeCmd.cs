@@ -62,36 +62,49 @@ namespace BeierholmWPF.Commands
 
         public void Execute(object? parameter)
         {
+            bool check = false;
             if (parameter is MainViewModel mvm)
             {
                 switch (mvm.SelectedBox)
                 {
                     case "InputEIncome":
+                    case "InputCustomerID":
                         if (mvm?.SelectedStartDate == null || mvm?.SelectedEndDate == null)
                         {
                             if (mvm?.SelectedText != null)
                             {
-                                mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);
+                                check = mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);
                             }
                         }
                         else if (mvm.SelectedText != null && mvm.SelectedText.Length > 0)
                         {
                             if (mvm.dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count <= 1)
                             {
-                                mvm.dvm.SetDataFieldsByCVR(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
+                                check = mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
                             }
                             else
                             {
-                                mvm.lvm.SetSelectedEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
+                                check = mvm.lvm.SetSelectedEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
                             }
                         }
                         else
                         {
-                            mvm.lvm.SetSelectedEIncomes(mvm?.SelectedStartDate, mvm?.SelectedEndDate);
+                            check = mvm.lvm.SetSelectedEIncomes(mvm?.SelectedStartDate, mvm?.SelectedEndDate);
                         }
-                        break;
-                    case "InputCostumerID":
-                        mvm.dvm.SetDataFieldsByCustomerID(mvm?.SelectedText, mvm?.SelectedStartDate, mvm?.SelectedEndDate);
+                        if (!check)
+                        {
+                            string s = mvm.SelectedBox == "InputEIncome" ? "CVR" : "Kundenr";
+                            if (mvm.SelectedText.Length < 8 && s == "CVR")
+                            {
+                                MessageBox.Show("Et CVR har 8 tal");
+                            }
+                            else
+                            {
+                                MessageBox.Show($"{s}: '{mvm.SelectedText}' findes ikke i systemet");
+                            }
+                        }
+
+                        //mvm.dvm.SetDataFieldsByCustomerID(mvm?.SelectedText, mvm?.SelectedStartDate, mvm?.SelectedEndDate);
                         break;
                     case "InputEndDate":
                     case "InputStartDate":

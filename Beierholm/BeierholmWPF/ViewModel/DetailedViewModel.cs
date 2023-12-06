@@ -1,4 +1,5 @@
 ﻿using BeierholmWPF.Commands;
+using BeierholmWPF.Model;
 using BeierholmWPF.Model.Customers;
 using BeierholmWPF.Model.EIncomes;
 using System;
@@ -17,16 +18,17 @@ namespace BeierholmWPF.ViewModel
 {
     public class DetailedViewModel : INotifyPropertyChanged
     {
-        private double[] dataField = new double[3];
-        public double[] DataField
-        {
-            get { return dataField; }
-            set
-            {
-                dataField = value;
-                OnPropertyChanged();
-            }
-        }
+        private Utility utility = new Utility();
+        //private double[] dataField = new double[3];
+        //public double[] DataField
+        //{
+        //    get { return dataField; }
+        //    set
+        //    {
+        //        dataField = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
         public ICommand Download { get; set; } = new DownloadCmd();
         public ICommand DownloadPDF { get; set; } = new DownloadPDFCmd();
 
@@ -49,49 +51,40 @@ namespace BeierholmWPF.ViewModel
             }
         }
 
-        public void SetDataFieldsByCVR(string cvr, DateTime? startDate, DateTime? endDate)
+        public bool SetDataFields(string input, DateTime? startDate, DateTime? endDate)
         {
+            bool outcome = false;
             EIncome = null;
+            Customer c = fm.CustomerRepository.GetCustomer(utility.StringToInt(input));
             foreach (EIncomeViewModel evm in EIncomes)
             {
-                if (evm.CVR == int.Parse(cvr))
+                if (evm.CVR == int.Parse(input) ||
+                    c != null && evm.CVR == c.CVR)
                 {
                     if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
                     {
                         EIncome = evm;
+                        outcome = true;
                     }
                 }
             }
-        }
-
-        public void SetDataFieldsByCustomerID(string customerID, DateTime? startDate, DateTime? endDate)
-        {
-            EIncome = null;
-            foreach (CustomerViewModel cvm in Customers)
-            {
-                if (cvm.GetCustomerID() == int.Parse(customerID))
-                {
-                    foreach (EIncome eincome in cvm.EIncomes)
-                    {
-                        if (startDate <= eincome.PeriodStart && endDate >= eincome.PeriodEnd)
-                        {
-                            EIncome = new EIncomeViewModel(eincome);
-                        }
-                    }
-                }
-            }
+            return outcome;
         }
 
         public List<EIncomeViewModel> GetEIncomes(string CVR, DateTime? startDate, DateTime? endDate)
         {
             List<EIncomeViewModel> sortedEIncome = new List<EIncomeViewModel>();
-            foreach (EIncomeViewModel evm in EIncomes)
+            foreach (CustomerViewModel cvm in Customers) 
             {
-                if (evm.CVR == int.Parse(CVR))
+                if (cvm.CVR == utility.StringToInt(CVR) || cvm.GetCustomerID() == utility.StringToInt(CVR))
                 {
-                    if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                    foreach (EIncome e in cvm.EIncomes)
                     {
-                        sortedEIncome.Add(evm);
+                        if (startDate <= e.PeriodStart && endDate >= e.PeriodEnd)
+                        {
+                            EIncomeViewModel evm = new EIncomeViewModel(e);
+                            sortedEIncome.Add(evm);
+                        }
                     }
                 }
             }
@@ -103,5 +96,6 @@ namespace BeierholmWPF.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
     }
 }

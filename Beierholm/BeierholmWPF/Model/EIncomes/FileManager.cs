@@ -27,9 +27,9 @@ namespace BeierholmWPF.Model.EIncomes
 
         public void InitializeRepository()
         {
+            int costumerID = 0;
             foreach (FileInfo file in GetAllFiles("*.csv")) //Get only .csv files!
             {
-                int costumerID = 0;
                 using (StreamReader read = new StreamReader(FilePath + file.Name)) //The new stuff where it automatically closes read again.
                 {
                     if (read != null)
@@ -69,8 +69,9 @@ namespace BeierholmWPF.Model.EIncomes
                         EIncome income = new EIncome(int.Parse(fileCVR), name, periodStart, periodEnd, createdDate, collectedData);
                         EIncomeRepository.AddEIncome(income);
 
-                        Customer cu = CustomerRepository.GetCustomer(costumerID);
-                        if (cu == null)
+                        Customer c = CustomerRepository.GetCustomers().Find(x => x.CVR == utility.StringToInt(fileCVR));
+
+                        if (c == null)
                         {
                             Customer costumer = new Customer(name, costumerID, int.Parse(fileCVR), BusinessType.ApS);
 
@@ -80,7 +81,7 @@ namespace BeierholmWPF.Model.EIncomes
                         }
                         else
                         {
-                            CustomerRepository.AddCustomerEIncome(cu, income);
+                            CustomerRepository.AddCustomerEIncome(c, income);
                         }
                     }
                 }

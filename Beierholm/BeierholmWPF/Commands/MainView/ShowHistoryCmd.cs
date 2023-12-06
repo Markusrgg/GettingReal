@@ -79,7 +79,7 @@ namespace BeierholmWPF.Commands
                 {
                     case "InputEIncome":
                         break;
-                    case "InputCostumerID":
+                    case "InputCustomerID":
                         break;
                     case "InputStartDate":
                         break;

@@ -1,4 +1,5 @@
 ﻿using BeierholmWPF.Commands;
+using BeierholmWPF.Model;
 using BeierholmWPF.Model.Customers;
 using BeierholmWPF.Model.EIncomes;
 using System;
@@ -21,6 +22,7 @@ namespace BeierholmWPF.ViewModel
     public class ListViewModel
     {
         private FileManager fm = new FileManager();
+        private Utility u = new Utility();
 
         public ObservableCollection<EIncomeViewModel> SelectedEIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
         public ObservableCollection<EIncomeViewModel> EIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
@@ -40,40 +42,54 @@ namespace BeierholmWPF.ViewModel
             }
         }
 
-        public void SetSelectedEIncomes(string CVR) //26550688
+        public bool SetSelectedEIncomes(string input) //26550688
         {
+            bool outcome = false;
             SelectedEIncomes.Clear();
+
+            Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));
             foreach (EIncomeViewModel evm in EIncomes)
             {
-                if (evm.CVR == int.Parse(CVR))
+                if (evm.CVR == int.Parse(input) ||
+                    c != null && evm.CVR == c.CVR)
                 {
                     SelectedEIncomes.Add(evm);
+                    outcome = true;
                 }
             }
+            return outcome;
         }
 
-        public void SetSelectedEIncomes(string CVR, DateTime? startDate, DateTime? endDate)
+        public bool SetSelectedEIncomes(string input, DateTime? startDate, DateTime? endDate)
         {
+            bool outcome = false;
             SelectedEIncomes.Clear();
+            Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));
             foreach (EIncomeViewModel evm in EIncomes)
             {
-                if (int.Parse(CVR) == evm.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
+                if (c != null && evm.CVR == c.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd || 
+                    int.Parse(input) == evm.CVR && startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
                 {
                     SelectedEIncomes.Add(evm);
+                    outcome = true;
                 }
             }
+            return outcome;
         }
 
-        public void SetSelectedEIncomes(DateTime? startDate, DateTime? endDate)
+        public bool SetSelectedEIncomes(DateTime? startDate, DateTime? endDate)
         {
+            bool outcome = false;
             SelectedEIncomes.Clear();
             foreach (EIncomeViewModel evm in EIncomes)
             {
                 if (startDate <= evm.PeriodStart && endDate >= evm.PeriodEnd)
                 {
                     SelectedEIncomes.Add(evm);
+                    outcome = true;
                 }
             }
+            return outcome;
         }
 
         public ICommand ShowEIncomeData { get; set; } = new ShowEIncomeDataCmd();

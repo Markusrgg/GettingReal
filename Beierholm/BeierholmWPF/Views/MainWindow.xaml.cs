@@ -1,4 +1,5 @@
 ﻿using BeierholmWPF.Model;
+using BeierholmWPF.Model.Customers;
 using BeierholmWPF.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -81,14 +82,14 @@ namespace BeierholmWPF
             if (string.IsNullOrEmpty(textBox?.Text))
             {
                 InputEIncome.IsEnabled = true;
-                InputCostumerID.IsEnabled = true;
+                InputCustomerID.IsEnabled = true;
                 InputStartDate.IsEnabled = true;
                 InputEndDate.IsEnabled = true;
             }
             else // If the current textbox has text, disable all textboxes except the current one
             {
                 InputEIncome.IsEnabled = (textBox == InputEIncome);
-                InputCostumerID.IsEnabled = (textBox == InputCostumerID);
+                InputCustomerID.IsEnabled = (textBox == InputCustomerID);
                 //InputStartDate.IsEnabled = (textBox == InputStartDate);
                 //InputEndDate.IsEnabled = (textBox == InputEndDate);
             }
@@ -96,8 +97,29 @@ namespace BeierholmWPF
 
         private void ShowEIncome_Click(object sender, RoutedEventArgs e)
         {
+            bool canRun = false;
+            if (mvm.SelectedBox == "InputEIncome")
+            {
+                foreach (EIncomeViewModel evm in mvm.lvm.EIncomes)
+                {
+                    if (evm.CVR == int.Parse(mvm?.SelectedText))
+                    {
+                        canRun = true;
+                    }
+                }
+            }
+            if (mvm.SelectedBox == "InputCustomerID") {
+                foreach (CustomerViewModel c in mvm.lvm.Customers)
+                {
+                    if (c.GetCustomerID() == int.Parse(mvm?.SelectedText))
+                    {
+                        canRun = true;
+                    }
+                }
+            }
+
             bool check = true;
-            if (mvm.SelectedText != null && mvm.SelectedText != "")
+            if (mvm.SelectedText != null && mvm.SelectedText != "" && canRun)
             {
                 if (InputStartDate.Text != "" && InputEndDate.Text != "")
                 {
@@ -125,7 +147,7 @@ namespace BeierholmWPF
                     }
                 }
             }
-            if (check && mvm.SelectedText == null || check && mvm?.SelectedText.Length < 1)
+            if (canRun && check && mvm.SelectedText == null || canRun && check && mvm?.SelectedText.Length < 1)
             {
                 listWindow = new ListWindow(lvm);
                 listWindow.ResultLabel.Content = $"Resultat for søgt: {mvm.SelectedStartDate} - {mvm.SelectedEndDate}";
@@ -135,7 +157,7 @@ namespace BeierholmWPF
                 listWindow.ShowDialog();
                 return;
             }
-            if (mvm.SelectedText.Length > 0 && mvm.SelectedStartDate == null && mvm.SelectedEndDate == null)
+            if (canRun && mvm.SelectedText.Length > 0 && mvm.SelectedStartDate == null && mvm.SelectedEndDate == null)
             {
                 listWindow = new ListWindow(lvm);
                 listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;

@@ -25,7 +25,7 @@
         <Button x:Name="DownloadButton" Content="Download" Command="{Binding Download}" HorizontalAlignment="Left" Margin="57,207,0,0" Width="126" Height="20" VerticalAlignment="Top"/>
         <Button x:Name="ConvertButton" Content="Download (PDF)" Command="{Binding DownloadPDF}" HorizontalAlignment="Left" Margin="213,207,0,0" Width="120" Height="20" VerticalAlignment="Top"/>
 
-        <ListView ItemsSource="{Binding EIncome.Fields}" Margin="110,67,110,132" HorizontalContentAlignment="Stretch">
+        <ListView ItemsSource="{Binding EIncome.Fields}" Margin="110,67,110,132" HorizontalContentAlignment="Stretch" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Felt Navn" DisplayMemberBinding="{Binding Key}"/>
@@ -33,6 +33,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
+
+
 
         <!--<ListBox ItemsSource="{Binding EIncome.Fields}" Margin="87,84,87,132">
             <ListBox.ItemTemplate>

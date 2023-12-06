@@ -16,7 +16,7 @@
 
         <!-- TextBoxes -->
         <TextBox x:Name="InputEIncome" Text="" HorizontalAlignment="Left" Margin="34,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="18" TextChanged="TextChanged"/>
-        <TextBox x:Name="InputCostumerID" HorizontalAlignment="Left" Margin="217,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" TextChanged="TextChanged"/>
+        <TextBox x:Name="InputCustomerID" HorizontalAlignment="Left" Margin="217,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" TextChanged="TextChanged"/>
         <!--<TextBox x:Name="InputStartDate" HorizontalAlignment="Left" Margin="193,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>-->
         <!--<TextBox x:Name="InputEndDate" DatePicker.SelectedDateChanged="InputEndDate_SelectedDateChanged"  HorizontalAlignment="Left" Margin="10,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Height="18" Grid.Column="1" TextChanged="TextChanged"/>-->
 
