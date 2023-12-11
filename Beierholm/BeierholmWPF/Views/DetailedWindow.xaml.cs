@@ -21,13 +21,11 @@ namespace BeierholmWPF
     /// </summary>
     public partial class DetailedWindow : Window
     {
-        public DetailedViewModel dvm;
         public DetailedWindow(DetailedViewModel dvm)
         {
-            this.dvm = dvm;
             InitializeComponent();
 
-            this.DataContext = dvm;
+            DataContext = dvm;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

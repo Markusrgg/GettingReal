@@ -11,12 +11,12 @@ namespace BeierholmWPF.ViewModel
     public class EIncomeViewModel
     {
         private EIncome EIncome { get; set; }
+        private Dictionary<string, double> Fields { get; set; } = new Dictionary<string, double>();
         public int CVR { get; set; }
         public string? Name { get; set; }
         public DateTime PeriodStart { get; set; }
         public DateTime PeriodEnd { get; set; }
         public DateTime CreatedDate { get; set; }
-        public Dictionary<string, double> Fields { get; set; } = new Dictionary<string, double>();
         public DataTable DT { get; set; } = new DataTable();
 
         public EIncomeViewModel(EIncome eIncome)
@@ -29,10 +29,10 @@ namespace BeierholmWPF.ViewModel
             CreatedDate = eIncome.CreatedDate;
             Fields = eIncome.Fields;
 
-            CreateDataTabel();
+            CreateDataTable();
         }
 
-        public void CreateDataTabel()
+        public void CreateDataTable()
         {
             int i = 0;
             double[] objects = new double[Fields.Count];

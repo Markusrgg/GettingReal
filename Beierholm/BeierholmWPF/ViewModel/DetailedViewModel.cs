@@ -16,19 +16,11 @@ using System.Windows.Input;
 
 namespace BeierholmWPF.ViewModel
 {
-    public class DetailedViewModel : INotifyPropertyChanged
+    public class DetailedViewModel
     {
-        private Utility utility = new Utility();
-        //private double[] dataField = new double[3];
-        //public double[] DataField
-        //{
-        //    get { return dataField; }
-        //    set
-        //    {
-        //        dataField = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
+        private Utility u = new Utility();
+        private FileManager fm = new FileManager();
+      
         public ICommand Download { get; set; } = new DownloadCmd();
         public ICommand DownloadPDF { get; set; } = new DownloadPDFCmd();
 
@@ -36,7 +28,6 @@ namespace BeierholmWPF.ViewModel
         public ObservableCollection<EIncomeViewModel> EIncomes { get; set; } = new ObservableCollection<EIncomeViewModel>();
         public ObservableCollection<CustomerViewModel> Customers { get; set; } = new ObservableCollection<CustomerViewModel>();
 
-        private FileManager fm = new FileManager();
 
         public DetailedViewModel()
         {
@@ -57,7 +48,7 @@ namespace BeierholmWPF.ViewModel
             EIncome = null;
             if (input.Length > 0)
             {
-                Customer c = fm.CustomerRepository.GetCustomer(utility.StringToInt(input));
+                Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));
                 foreach (EIncomeViewModel evm in EIncomes)
                 {
                     if (evm.CVR == int.Parse(input) ||
@@ -79,7 +70,7 @@ namespace BeierholmWPF.ViewModel
             List<EIncomeViewModel> sortedEIncome = new List<EIncomeViewModel>();
             foreach (CustomerViewModel cvm in Customers) 
             {
-                if (cvm.CVR == utility.StringToInt(CVR) || cvm.GetCustomerID() == utility.StringToInt(CVR))
+                if (cvm.CVR == u.StringToInt(CVR) || cvm.GetCustomerID() == u.StringToInt(CVR))
                 {
                     foreach (EIncome e in cvm.EIncomes)
                     {
@@ -93,12 +84,5 @@ namespace BeierholmWPF.ViewModel
             }
             return sortedEIncome;
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
     }
 }

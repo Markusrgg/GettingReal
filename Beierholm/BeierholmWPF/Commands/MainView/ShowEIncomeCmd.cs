@@ -16,8 +16,6 @@ namespace BeierholmWPF.Commands
 {
     public class ShowEIncomeCmd : ICommand
     {
-        private Utility utility = new Utility();
-
         public event EventHandler? CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }

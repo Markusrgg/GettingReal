@@ -20,7 +20,7 @@ namespace BeierholmWPF
     /// </summary>
     public partial class ListWindow : Window
     {
-        public ListViewModel lvm;
+        private ListViewModel lvm;
         private DetailedWindow detailedWindow;
         private DetailedViewModel dvm;
 
