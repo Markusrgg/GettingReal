@@ -61,7 +61,7 @@ namespace BeierholmWPF.Model.EIncomes
                                 if (fieldData[next] != null && fieldData[next] != "")
                                 {
                                     double data = utility.StringToDouble(fieldData[next]);
-                                    collectedData.Add($"{split[1].Replace(" ", "")}", data);
+                                    collectedData.Add($"{split[1]}", data);
                                 }
                                 temp++; //Increases to get next value for the specific "Feltnr".
                             }
