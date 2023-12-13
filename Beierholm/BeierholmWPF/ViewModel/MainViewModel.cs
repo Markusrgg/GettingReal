@@ -35,9 +35,9 @@ namespace BeierholmWPF.ViewModel
         public ICommand ShowEIncome { get; set; } = new ShowEIncomeCmd();
         public ICommand ShowHistory { get; set; } = new ShowHistoryCmd();
 
-        public MainViewModel(ListViewModel listView, DetailedViewModel dvm)
+        public MainViewModel(ListViewModel lvm, DetailedViewModel dvm)
         {
-            lvm = listView;
+            this.lvm = lvm;
             this.dvm = dvm;
         }
 

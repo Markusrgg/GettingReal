@@ -49,12 +49,10 @@ namespace BeierholmWPF.Commands
                 {
                     case "InputEIncome":
                     case "InputCustomerID":
-                        if (mvm?.SelectedStartDate == null || mvm?.SelectedEndDate == null)
+                        if (mvm?.SelectedStartDate == null && mvm?.SelectedText != null || 
+                            mvm?.SelectedEndDate == null && mvm?.SelectedText != null)
                         {
-                            if (mvm?.SelectedText != null)
-                            {
                                 check = mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);
-                            }
                         }
                         else if (mvm.SelectedText != null && mvm.SelectedText.Length > 0)
                         {

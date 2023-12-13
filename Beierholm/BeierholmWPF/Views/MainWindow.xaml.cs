@@ -130,40 +130,38 @@ namespace BeierholmWPF
             }
 
             bool check = true;
-            if (mvm.SelectedText != null && mvm.SelectedText != "" && canRun)
+            if (mvm.SelectedText != null && mvm.SelectedText != "" && canRun
+                && InputStartDate.Text != "" && InputEndDate.Text != "")
             {
-                if (InputStartDate.Text != "" && InputEndDate.Text != "")
+                int count = dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count;
+                if (count == 1)
                 {
-                    int count = dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count;
-                    if (count == 1)
-                    {
-                        check = false;
-                        detailedWindow = new DetailedWindow(dvm);
+                    check = false;
+                    detailedWindow = new DetailedWindow(dvm);
 
-                        detailedWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
+                    detailedWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
 
-                        mvm.ShowEIncome.Execute(mvm);
+                    mvm.ShowEIncome.Execute(mvm);
 
-                        detailedWindow.ShowDialog();
-                    }
-                    if (count > 1)
-                    {
-                        check = false;
-                        listWindow = new ListWindow(lvm);
-                        listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
+                    detailedWindow.ShowDialog();
+                }
+                if (count > 1)
+                {
+                    check = false;
+                    listWindow = new ListWindow(lvm);
+                    listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;
 
-                        mvm.ShowEIncome.Execute(mvm);
+                    mvm.ShowEIncome.Execute(mvm);
 
-                        listWindow.ShowDialog();
-                    }
+                    listWindow.ShowDialog();
                 }
             }
             if (canRun && check && mvm.SelectedText == null || canRun && check && mvm?.SelectedText.Length < 1)
             {
                 listWindow = new ListWindow(lvm);
                 string format = "dd-MM-yyyy";
-                string start = mvm.SelectedStartDate.Value.ToString("dd-MM-yyyy");
-                string end = mvm.SelectedEndDate.Value.ToString("dd-MM-yyyy");
+                string start = mvm.SelectedStartDate.Value.ToString(format);
+                string end = mvm.SelectedEndDate.Value.ToString(format);
 
                 listWindow.ResultLabel.Content = $"Resultat for søgt: {start} - {end}";
 
