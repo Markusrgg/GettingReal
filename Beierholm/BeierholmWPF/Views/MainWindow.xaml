@@ -11,8 +11,8 @@
         <Image Margin="0,0,10,-17" Source="/Images/Beierholm-logo.png" Stretch="Fill" HorizontalAlignment="Right" Width="212" Height="76" VerticalAlignment="Bottom" Opacity="0.7"/>
 
         <!-- Buttons -->
-        <Button x:Name="ShowEIncome" Command="{Binding ShowEIncome}" CommandParameter="{Binding}" Content="Vis E-Indkomst" HorizontalAlignment="Left" Margin="60,190,0,0" VerticalAlignment="Top" Width="118" Click="ShowEIncome_Click"/>
-        <Button x:Name="HistoryButton" Command="{Binding ShowHistory}" CommandParameter="{Binding}" Content="Historik" Margin="212,190,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Click="HistoryButton_Click"/>
+        <Button x:Name="ShowEIncome" Command="{Binding ShowEIncome}" CommandParameter="{Binding}" Content="Vis E-Indkomst" HorizontalAlignment="Left" Margin="42,190,0,0" VerticalAlignment="Top" Width="118" Click="ShowEIncome_Click"/>
+        <Button x:Name="HistoryButton" Command="{Binding ShowHistory}" CommandParameter="{Binding}" Content="Historik" Margin="224,190,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Click="HistoryButton_Click"/>
 
         <!-- TextBoxes -->
         <TextBox x:Name="InputEIncome" Text="" HorizontalAlignment="Left" Margin="34,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="18" TextChanged="TextChanged"/>

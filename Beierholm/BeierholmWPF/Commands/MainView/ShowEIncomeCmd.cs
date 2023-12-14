@@ -1,15 +1,6 @@
-﻿using BeierholmWPF.Model;
-using BeierholmWPF.Model.EIncomes;
-using BeierholmWPF.ViewModel;
+﻿using BeierholmWPF.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.IO.MemoryMappedFiles;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace BeierholmWPF.Commands

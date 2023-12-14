@@ -1,11 +1,6 @@
 ﻿using BeierholmWPF.Model.EIncomes;
 using BeierholmWPF.Model.Enums;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Markup;
 
 namespace BeierholmWPF.Model.Customers
 {

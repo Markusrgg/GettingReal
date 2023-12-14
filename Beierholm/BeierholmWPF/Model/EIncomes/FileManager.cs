@@ -1,15 +1,8 @@
 ﻿using BeierholmWPF.Model.Customers;
 using BeierholmWPF.Model.Enums;
-using BeierholmWPF.Model.Exceptions;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Navigation;
 
 namespace BeierholmWPF.Model.EIncomes
 {

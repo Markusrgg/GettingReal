@@ -2,8 +2,6 @@ using BeierholmWPF.Model;
 using BeierholmWPF.Model.Customers;
 using BeierholmWPF.Model.EIncomes;
 using BeierholmWPF.Model.Exceptions;
-using BeierholmWPF.ViewModel;
-using System.Runtime.ConstrainedExecution;
 
 namespace UnitTest1
 {
