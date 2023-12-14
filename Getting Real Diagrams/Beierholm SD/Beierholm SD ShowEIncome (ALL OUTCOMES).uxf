@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>2</zoom_level>
+  <zoom_level>3</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>60</x>
+      <x>189</x>
       <y>0</y>
-      <w>20</w>
-      <h>6</h>
+      <w>30</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:MainWindow_</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>68</x>
-      <y>4</y>
-      <w>6</w>
-      <h>14</h>
+      <x>201</x>
+      <y>6</y>
+      <w>9</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>68</x>
-      <y>14</y>
-      <w>4</w>
-      <h>340</h>
+      <x>201</x>
+      <y>21</y>
+      <w>6</w>
+      <h>510</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -37,10 +37,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
-      <y>14</y>
-      <w>72</w>
-      <h>8</h>
+      <x>99</x>
+      <y>21</y>
+      <w>108</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 ShowEIncome(object sender, RoutedEventArgs e)</panel_attributes>
@@ -49,10 +49,10 @@ ShowEIncome(object sender, RoutedEventArgs e)</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>38</x>
-      <y>32</y>
-      <w>120</w>
-      <h>52</h>
+      <x>156</x>
+      <y>48</y>
+      <w>180</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>Opt
 group=group-0</panel_attributes>
@@ -61,10 +61,10 @@ group=group-0</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>46</x>
-      <y>32</y>
-      <w>50</w>
-      <h>8</h>
+      <x>168</x>
+      <y>48</y>
+      <w>75</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>if (SelectedBox == "InputEIncome")
 style=wordwrap
@@ -74,10 +74,10 @@ group=group-0</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>46</x>
-      <y>38</y>
-      <w>104</w>
-      <h>28</h>
+      <x>168</x>
+      <y>57</y>
+      <w>156</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Loop
 group=group-1</panel_attributes>
@@ -86,10 +86,10 @@ group=group-1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>56</x>
-      <y>38</y>
-      <w>74</w>
-      <h>10</h>
+      <x>183</x>
+      <y>57</y>
+      <w>111</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>foreach (EIncomeViewModel evm in mvm.lvm.EIncomes
 style=wordwrap
@@ -99,10 +99,10 @@ group=group-1</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>52</x>
-      <y>44</y>
-      <w>82</w>
-      <h>20</h>
+      <x>177</x>
+      <y>66</y>
+      <w>123</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Opt
 group=group-2</panel_attributes>
@@ -111,10 +111,10 @@ group=group-2</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>60</x>
-      <y>44</y>
-      <w>58</w>
-      <h>10</h>
+      <x>189</x>
+      <y>66</y>
+      <w>87</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>if (mvm.SelectedText.Length &gt; 0 &amp;&amp; 
 evm.CVR == int.Parse(mvm.SelectedText))
@@ -125,10 +125,10 @@ group=group-2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>20</y>
-      <w>46</w>
-      <h>12</h>
+      <x>204</x>
+      <y>30</y>
+      <w>69</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 bool canRun = false</panel_attributes>
@@ -137,10 +137,10 @@ bool canRun = false</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>46</x>
-      <y>68</y>
-      <w>104</w>
-      <h>14</h>
+      <x>168</x>
+      <y>102</y>
+      <w>156</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>Opt
 group=group-3</panel_attributes>
@@ -149,10 +149,10 @@ group=group-3</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>54</x>
-      <y>68</y>
-      <w>60</w>
-      <h>10</h>
+      <x>180</x>
+      <y>102</y>
+      <w>90</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>!canRun &amp;&amp; mvm.SelectedText.Length == 1
 style=wordwrap
@@ -162,10 +162,10 @@ group=group-3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
-      <y>74</y>
-      <w>72</w>
-      <h>8</h>
+      <x>99</x>
+      <y>111</y>
+      <w>108</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 MessageBox.Show("Et CVR har 8 tal")</panel_attributes>
@@ -174,10 +174,10 @@ MessageBox.Show("Et CVR har 8 tal")</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>52</y>
-      <w>40</w>
-      <h>12</h>
+      <x>204</x>
+      <y>78</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 canRun = true</panel_attributes>
@@ -186,10 +186,10 @@ canRun = true</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>46</x>
-      <y>124</y>
-      <w>88</w>
-      <h>10</h>
+      <x>168</x>
+      <y>186</y>
+      <w>132</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>if (mvm.SelectedText.Length &lt; 1 &amp;&amp; mvm.SelectedStartDate != null &amp;&amp; mvm.SelectedEndDate != null)
 style=wordwrap
@@ -199,10 +199,10 @@ group=group-9</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>38</x>
-      <y>124</y>
-      <w>120</w>
-      <h>20</h>
+      <x>156</x>
+      <y>186</y>
+      <w>180</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Opt
 group=group-9</panel_attributes>
@@ -211,10 +211,10 @@ group=group-9</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>46</x>
-      <y>86</y>
-      <w>52</w>
-      <h>8</h>
+      <x>168</x>
+      <y>129</y>
+      <w>78</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>if (SelectedBox == "InputCustomerID")
 style=wordwrap
@@ -224,10 +224,10 @@ group=group-12</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>38</x>
-      <y>86</y>
-      <w>120</w>
-      <h>36</h>
+      <x>156</x>
+      <y>129</y>
+      <w>180</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Opt
 group=group-12</panel_attributes>
@@ -236,10 +236,10 @@ group=group-12</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>56</x>
-      <y>92</y>
-      <w>74</w>
-      <h>10</h>
+      <x>183</x>
+      <y>138</y>
+      <w>111</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>foreach (CustomerViewModel c in mvm.lvm.Customers)
 style=wordwrap
@@ -249,10 +249,10 @@ group=group-11</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>46</x>
-      <y>92</y>
-      <w>104</w>
-      <h>28</h>
+      <x>168</x>
+      <y>138</y>
+      <w>156</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Loop
 group=group-11</panel_attributes>
@@ -261,10 +261,10 @@ group=group-11</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>60</x>
-      <y>98</y>
-      <w>70</w>
-      <h>10</h>
+      <x>189</x>
+      <y>147</y>
+      <w>105</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>if (mvm.SelectedText.Length &gt; 0 &amp;&amp; 
 c.GetCustomerID() == int.Parse(mvm.SelectedText))
@@ -275,10 +275,10 @@ group=group-10</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>52</x>
-      <y>98</y>
-      <w>82</w>
-      <h>20</h>
+      <x>177</x>
+      <y>147</y>
+      <w>123</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Opt
 group=group-10</panel_attributes>
@@ -287,10 +287,10 @@ group=group-10</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>106</y>
-      <w>40</w>
-      <h>12</h>
+      <x>204</x>
+      <y>159</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 canRun = true</panel_attributes>
@@ -299,10 +299,10 @@ canRun = true</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>132</y>
-      <w>40</w>
-      <h>12</h>
+      <x>204</x>
+      <y>198</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 canRun = true</panel_attributes>
@@ -311,10 +311,10 @@ canRun = true</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>144</y>
-      <w>44</w>
-      <h>12</h>
+      <x>204</x>
+      <y>216</y>
+      <w>66</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 bool check = true</panel_attributes>
@@ -323,10 +323,10 @@ bool check = true</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>38</x>
-      <y>154</y>
-      <w>120</w>
-      <h>112</h>
+      <x>156</x>
+      <y>231</y>
+      <w>180</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -334,10 +334,10 @@ bool check = true</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>48</x>
-      <y>154</y>
-      <w>92</w>
-      <h>8</h>
+      <x>171</x>
+      <y>231</y>
+      <w>138</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (mvm.SelectedText != null &amp;&amp; mvm.SelectedText != "" &amp;&amp; canRun
 &amp;&amp; InputStartDate.Text != "" &amp;&amp; InputEndDate.Text != "")
@@ -347,10 +347,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>162</y>
-      <w>98</w>
-      <h>12</h>
+      <x>204</x>
+      <y>243</y>
+      <w>147</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 int count = dvm.GetEIncomes(mvm.SelectedText, 
@@ -361,10 +361,10 @@ int count = dvm.GetEIncomes(mvm.SelectedText,
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>46</x>
-      <y>172</y>
-      <w>104</w>
-      <h>38</h>
+      <x>168</x>
+      <y>258</y>
+      <w>156</w>
+      <h>57</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -372,10 +372,10 @@ int count = dvm.GetEIncomes(mvm.SelectedText,
   <element>
     <id>Text</id>
     <coordinates>
-      <x>452</x>
-      <y>210</y>
-      <w>88</w>
-      <h>10</h>
+      <x>777</x>
+      <y>315</y>
+      <w>132</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>if (parameter is MainViewModel mvm)
 style=wordwrap</panel_attributes>
@@ -384,10 +384,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>174</y>
-      <w>38</w>
-      <h>12</h>
+      <x>204</x>
+      <y>261</y>
+      <w>57</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 check = false;</panel_attributes>
@@ -396,10 +396,10 @@ check = false;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>184</y>
-      <w>676</w>
-      <h>8</h>
+      <x>204</x>
+      <y>276</y>
+      <w>1014</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 detailedWindow = new DetailedWindow(dvm);</panel_attributes>
@@ -408,10 +408,10 @@ detailedWindow = new DetailedWindow(dvm);</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>742</x>
-      <y>184</y>
-      <w>24</w>
-      <h>6</h>
+      <x>1212</x>
+      <y>276</y>
+      <w>36</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:DetailedWindow_</panel_attributes>
     <additional_attributes/>
@@ -419,10 +419,10 @@ detailedWindow = new DetailedWindow(dvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>196</y>
-      <w>430</w>
-      <h>8</h>
+      <x>204</x>
+      <y>294</y>
+      <w>645</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 mvm.ShowEIncome.Execute(mvm);</panel_attributes>
@@ -431,10 +431,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>484</x>
-      <y>178</y>
-      <w>28</w>
-      <h>6</h>
+      <x>825</x>
+      <y>267</y>
+      <w>42</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:ShowEIncomeCmd_</panel_attributes>
     <additional_attributes/>
@@ -442,10 +442,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>182</y>
-      <w>6</w>
-      <h>18</h>
+      <x>843</x>
+      <y>273</y>
+      <w>9</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -453,10 +453,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>496</x>
-      <y>196</y>
-      <w>4</w>
-      <h>226</h>
+      <x>843</x>
+      <y>294</y>
+      <w>6</w>
+      <h>339</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -464,10 +464,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>444</x>
-      <y>210</y>
-      <w>234</w>
-      <h>220</h>
+      <x>765</x>
+      <y>315</y>
+      <w>351</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -475,10 +475,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
-      <y>198</y>
-      <w>44</w>
-      <h>10</h>
+      <x>846</x>
+      <y>297</y>
+      <w>66</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 bool check = false</panel_attributes>
@@ -487,10 +487,10 @@ bool check = false</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>54</x>
-      <y>170</y>
-      <w>24</w>
-      <h>6</h>
+      <x>180</x>
+      <y>255</y>
+      <w>36</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>[ if ] (count == 1)
 style=wordwrap</panel_attributes>
@@ -499,10 +499,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>458</x>
-      <y>218</y>
-      <w>30</w>
-      <h>6</h>
+      <x>786</x>
+      <y>327</y>
+      <w>45</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>(mvm.SelectedBox)
 style=wordwrap</panel_attributes>
@@ -511,10 +511,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>452</x>
-      <y>218</y>
-      <w>218</w>
-      <h>208</h>
+      <x>777</x>
+      <y>327</y>
+      <w>327</w>
+      <h>312</h>
     </coordinates>
     <panel_attributes>Alt</panel_attributes>
     <additional_attributes/>
@@ -522,10 +522,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>484</x>
-      <y>244</y>
-      <w>182</w>
-      <h>6</h>
+      <x>825</x>
+      <y>366</y>
+      <w>273</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>890.0;10.0;10.0;10.0</additional_attributes>
@@ -533,10 +533,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>452</x>
-      <y>224</y>
-      <w>36</w>
-      <h>8</h>
+      <x>777</x>
+      <y>336</y>
+      <w>54</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>case ["InputEIncome"]:
 case ["InputCustomerID"]:
@@ -546,10 +546,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>382</x>
-      <y>234</y>
-      <w>118</w>
-      <h>50</h>
+      <x>672</x>
+      <y>351</y>
+      <w>177</w>
+      <h>75</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 check = mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);</panel_attributes>
@@ -558,10 +558,10 @@ check = mvm.lvm.SetSelectedEIncomes(mvm.SelectedText);</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>226</y>
-      <w>92</w>
-      <h>8</h>
+      <x>849</x>
+      <y>339</y>
+      <w>138</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (mvm?.SelectedStartDate == null &amp;&amp; mvm?.SelectedText != null || 
     mvm?.SelectedEndDate == null &amp;&amp; mvm?.SelectedText != null)
@@ -572,10 +572,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>248</y>
-      <w>92</w>
-      <h>8</h>
+      <x>849</x>
+      <y>372</y>
+      <w>138</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[else if] (mvm.SelectedText != null &amp;&amp; mvm.SelectedText.Length &gt; 0)
 style=wordwrap</panel_attributes>
@@ -584,10 +584,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>486</x>
-      <y>224</y>
-      <w>176</w>
-      <h>100</h>
+      <x>828</x>
+      <y>336</y>
+      <w>264</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Alt</panel_attributes>
     <additional_attributes/>
@@ -595,10 +595,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>490</x>
-      <y>254</y>
-      <w>166</w>
-      <h>40</h>
+      <x>834</x>
+      <y>381</y>
+      <w>249</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Alt</panel_attributes>
     <additional_attributes/>
@@ -606,10 +606,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>254</y>
-      <w>84</w>
-      <h>8</h>
+      <x>849</x>
+      <y>381</y>
+      <w>126</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (mvm.dvm.GetEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate).Count &lt;= 1)
 style=wordwrap</panel_attributes>
@@ -618,10 +618,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
-      <y>210</y>
-      <w>336</w>
-      <h>56</h>
+      <x>846</x>
+      <y>315</y>
+      <w>504</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 check = mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);</panel_attributes>
@@ -630,10 +630,10 @@ check = mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.Selec
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>488</x>
-      <y>272</y>
-      <w>172</w>
-      <h>6</h>
+      <x>831</x>
+      <y>408</y>
+      <w>258</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>840.0;10.0;10.0;10.0</additional_attributes>
@@ -641,10 +641,10 @@ check = mvm.dvm.SetDataFields(mvm.SelectedText, mvm.SelectedStartDate, mvm.Selec
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>274</y>
-      <w>90</w>
-      <h>8</h>
+      <x>849</x>
+      <y>411</y>
+      <w>135</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ else ]
 style=wordwrap</panel_attributes>
@@ -653,10 +653,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>276</y>
-      <w>140</w>
-      <h>34</h>
+      <x>639</x>
+      <y>414</y>
+      <w>210</w>
+      <h>51</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
  check = mvm.lvm.SetSelectedEIncomes(mvm.SelectedText, mvm.SelectedStartDate, mvm.SelectedEndDate);
@@ -666,10 +666,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>484</x>
-      <y>296</y>
-      <w>182</w>
-      <h>6</h>
+      <x>825</x>
+      <y>444</y>
+      <w>273</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>890.0;10.0;10.0;10.0</additional_attributes>
@@ -677,10 +677,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>300</y>
-      <w>92</w>
-      <h>8</h>
+      <x>849</x>
+      <y>450</y>
+      <w>138</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ else ]
 
@@ -690,10 +690,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>336</x>
-      <y>302</y>
-      <w>164</w>
-      <h>104</h>
+      <x>603</x>
+      <y>453</y>
+      <w>246</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 check = mvm.lvm.SetSelectedEIncomes(mvm?.SelectedStartDate, mvm?.SelectedEndDate);</panel_attributes>
@@ -702,10 +702,10 @@ check = mvm.lvm.SetSelectedEIncomes(mvm?.SelectedStartDate, mvm?.SelectedEndDate
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>486</x>
-      <y>326</y>
-      <w>176</w>
-      <h>52</h>
+      <x>828</x>
+      <y>489</y>
+      <w>264</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -713,10 +713,10 @@ check = mvm.lvm.SetSelectedEIncomes(mvm?.SelectedStartDate, mvm?.SelectedEndDate
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>326</y>
-      <w>92</w>
-      <h>8</h>
+      <x>849</x>
+      <y>489</y>
+      <w>138</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (!check)
 
@@ -726,10 +726,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>498</x>
-      <y>330</y>
-      <w>108</w>
-      <h>12</h>
+      <x>846</x>
+      <y>495</y>
+      <w>162</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 string s = mvm.SelectedBox == "InputEIncome" ? "CVR" : "Kundenr";</panel_attributes>
@@ -738,10 +738,10 @@ string s = mvm.SelectedBox == "InputEIncome" ? "CVR" : "Kundenr";</panel_attribu
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>490</x>
-      <y>340</y>
-      <w>166</w>
-      <h>30</h>
+      <x>834</x>
+      <y>510</y>
+      <w>249</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Alt</panel_attributes>
     <additional_attributes/>
@@ -749,10 +749,10 @@ string s = mvm.SelectedBox == "InputEIncome" ? "CVR" : "Kundenr";</panel_attribu
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>340</y>
-      <w>68</w>
-      <h>8</h>
+      <x>849</x>
+      <y>510</y>
+      <w>102</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (mvm.SelectedText.Length &lt; 8 &amp;&amp; s == "CVR")
 style=wordwrap</panel_attributes>
@@ -761,10 +761,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
-      <y>346</y>
-      <w>500</w>
-      <h>18</h>
+      <x>99</x>
+      <y>519</y>
+      <w>750</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 MessageBox.Show("Et CVR har 8 tal")</panel_attributes>
@@ -773,10 +773,10 @@ MessageBox.Show("Et CVR har 8 tal")</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>488</x>
-      <y>352</y>
-      <w>172</w>
-      <h>6</h>
+      <x>831</x>
+      <y>528</y>
+      <w>258</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>840.0;10.0;10.0;10.0</additional_attributes>
@@ -784,10 +784,10 @@ MessageBox.Show("Et CVR har 8 tal")</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>354</y>
-      <w>72</w>
-      <h>8</h>
+      <x>849</x>
+      <y>531</y>
+      <w>108</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ else ] 
 style=wordwrap</panel_attributes>
@@ -796,10 +796,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
-      <y>362</y>
-      <w>500</w>
-      <h>8</h>
+      <x>99</x>
+      <y>543</y>
+      <w>750</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 MessageBox.Show($"{s}: '{mvm.SelectedText}' findes ikke i systemet");</panel_attributes>
@@ -808,10 +808,10 @@ MessageBox.Show($"{s}: '{mvm.SelectedText}' findes ikke i systemet");</panel_att
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>382</y>
-      <w>224</w>
-      <h>6</h>
+      <x>774</x>
+      <y>573</y>
+      <w>336</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>1100.0;10.0;10.0;10.0</additional_attributes>
@@ -819,10 +819,10 @@ MessageBox.Show($"{s}: '{mvm.SelectedText}' findes ikke i systemet");</panel_att
   <element>
     <id>Text</id>
     <coordinates>
-      <x>452</x>
-      <y>388</y>
-      <w>36</w>
-      <h>8</h>
+      <x>777</x>
+      <y>582</y>
+      <w>54</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>case "InputEndDate":
 case "InputStartDate":
@@ -832,10 +832,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>486</x>
-      <y>396</y>
-      <w>176</w>
-      <h>24</h>
+      <x>828</x>
+      <y>594</y>
+      <w>264</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -843,10 +843,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>500</x>
-      <y>396</y>
-      <w>52</w>
-      <h>8</h>
+      <x>849</x>
+      <y>594</y>
+      <w>78</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (mvm.SelectedText.Length &lt; 1 &amp;&amp; mvm.SelectedStartDate != null &amp;&amp; mvm.SelectedEndDate != null)
 style=wordwrap</panel_attributes>
@@ -855,10 +855,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>398</y>
-      <w>180</w>
-      <h>88</h>
+      <x>579</x>
+      <y>597</y>
+      <w>270</w>
+      <h>132</h>
     </coordinates>
     <panel_attributes>lt=-
 mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);</panel_attributes>
@@ -867,10 +867,10 @@ mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);</panel_
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>262</x>
-      <y>454</y>
-      <w>20</w>
-      <h>6</h>
+      <x>492</x>
+      <y>681</y>
+      <w>30</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:ListWindow_</panel_attributes>
     <additional_attributes/>
@@ -878,10 +878,10 @@ mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);</panel_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>458</y>
-      <w>6</w>
-      <h>10</h>
+      <x>504</x>
+      <y>687</y>
+      <w>9</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -889,10 +889,10 @@ mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);</panel_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>752</x>
-      <y>188</y>
-      <w>6</w>
-      <h>10</h>
+      <x>1227</x>
+      <y>282</y>
+      <w>9</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -900,10 +900,10 @@ mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);</panel_
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>752</x>
-      <y>194</y>
-      <w>4</w>
-      <h>10</h>
+      <x>1227</x>
+      <y>291</y>
+      <w>6</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -911,10 +911,10 @@ mvm.lvm.SetSelectedEIncomes(mvm.SelectedStartDate, mvm.SelectedEndDate);</panel_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>190</y>
-      <w>686</w>
-      <h>8</h>
+      <x>204</x>
+      <y>285</y>
+      <w>1029</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 detailedWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;</panel_attributes>
@@ -923,10 +923,10 @@ detailedWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;<
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>202</y>
-      <w>686</w>
-      <h>434</h>
+      <x>204</x>
+      <y>303</y>
+      <w>1029</w>
+      <h>651</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 detailedWindow.ShowDialog();</panel_attributes>
@@ -935,10 +935,10 @@ detailedWindow.ShowDialog();</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>46</x>
-      <y>212</y>
-      <w>104</w>
-      <h>40</h>
+      <x>168</x>
+      <y>318</y>
+      <w>156</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -946,10 +946,10 @@ detailedWindow.ShowDialog();</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>54</x>
-      <y>212</y>
-      <w>24</w>
-      <h>6</h>
+      <x>180</x>
+      <y>318</y>
+      <w>36</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>[ if ] (count &gt; 1)
 style=wordwrap</panel_attributes>
@@ -958,10 +958,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>216</y>
-      <w>38</w>
-      <h>12</h>
+      <x>204</x>
+      <y>324</y>
+      <w>57</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 check = false;</panel_attributes>
@@ -970,10 +970,10 @@ check = false;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>226</y>
-      <w>246</w>
-      <h>232</h>
+      <x>204</x>
+      <y>339</y>
+      <w>369</w>
+      <h>348</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow = new ListWindow(lvm);</panel_attributes>
@@ -982,10 +982,10 @@ listWindow = new ListWindow(lvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>232</y>
-      <w>284</w>
-      <h>244</h>
+      <x>204</x>
+      <y>348</y>
+      <w>426</w>
+      <h>366</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;</panel_attributes>
@@ -994,10 +994,10 @@ listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;</pan
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>270</x>
-      <y>464</y>
-      <w>4</w>
-      <h>26</h>
+      <x>504</x>
+      <y>696</y>
+      <w>6</w>
+      <h>39</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -1005,10 +1005,10 @@ listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;</pan
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>198</y>
-      <w>120</w>
-      <h>46</h>
+      <x>204</x>
+      <y>297</y>
+      <w>180</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 mvm.ShowEIncome.Execute(mvm);</panel_attributes>
@@ -1017,10 +1017,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>244</y>
-      <w>204</w>
-      <h>240</h>
+      <x>204</x>
+      <y>366</y>
+      <w>306</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -1029,10 +1029,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>38</x>
-      <y>268</y>
-      <w>120</w>
-      <h>48</h>
+      <x>156</x>
+      <y>402</y>
+      <w>180</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -1040,10 +1040,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>46</x>
-      <y>268</y>
-      <w>72</w>
-      <h>8</h>
+      <x>168</x>
+      <y>402</y>
+      <w>108</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (canRun &amp;&amp; check &amp;&amp; mvm.SelectedText == null || canRun &amp;&amp; check &amp;&amp; mvm?.SelectedText.Length &lt; 1)
 style=wordwrap</panel_attributes>
@@ -1052,10 +1052,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>282</y>
-      <w>98</w>
-      <h>12</h>
+      <x>204</x>
+      <y>423</y>
+      <w>147</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 string format = "dd-MM-yyyy";
@@ -1066,10 +1066,10 @@ string end = mvm.SelectedEndDate.Value.ToString(format);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>276</y>
-      <w>202</w>
-      <h>8</h>
+      <x>204</x>
+      <y>414</y>
+      <w>303</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow = new ListWindow(lvm);</panel_attributes>
@@ -1078,10 +1078,10 @@ listWindow = new ListWindow(lvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>294</y>
-      <w>190</w>
-      <h>8</h>
+      <x>204</x>
+      <y>441</y>
+      <w>285</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow.ResultLabel.Content = $"Resultat for søgt: {start} - {end}";</panel_attributes>
@@ -1090,10 +1090,10 @@ listWindow.ResultLabel.Content = $"Resultat for søgt: {start} - {end}";</panel_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>238</y>
-      <w>120</w>
-      <h>70</h>
+      <x>204</x>
+      <y>357</y>
+      <w>180</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 mvm.ShowEIncome.Execute(mvm);</panel_attributes>
@@ -1102,10 +1102,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>306</y>
-      <w>178</w>
-      <h>8</h>
+      <x>204</x>
+      <y>459</y>
+      <w>267</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow.ShowDialog();</panel_attributes>
@@ -1114,10 +1114,10 @@ listWindow.ShowDialog();</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>38</x>
-      <y>318</y>
-      <w>120</w>
-      <h>38</h>
+      <x>156</x>
+      <y>477</y>
+      <w>180</w>
+      <h>57</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -1125,10 +1125,10 @@ listWindow.ShowDialog();</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>46</x>
-      <y>318</y>
-      <w>88</w>
-      <h>8</h>
+      <x>168</x>
+      <y>477</y>
+      <w>132</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (canRun &amp;&amp; mvm.SelectedText.Length &gt; 0 &amp;&amp; mvm.SelectedStartDate == null &amp;&amp; mvm.SelectedEndDate == null)
 style=wordwrap</panel_attributes>
@@ -1137,10 +1137,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>328</y>
-      <w>202</w>
-      <h>8</h>
+      <x>204</x>
+      <y>492</y>
+      <w>303</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow = new ListWindow(lvm);</panel_attributes>
@@ -1149,10 +1149,10 @@ listWindow = new ListWindow(lvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>334</y>
-      <w>190</w>
-      <h>8</h>
+      <x>204</x>
+      <y>501</y>
+      <w>285</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;</panel_attributes>
@@ -1161,10 +1161,10 @@ listWindow.ResultLabel.Content = "Resultat for søgt: " + mvm.SelectedText;</pan
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>278</y>
-      <w>120</w>
-      <h>70</h>
+      <x>204</x>
+      <y>417</y>
+      <w>180</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 mvm.ShowEIncome.Execute(mvm);</panel_attributes>
@@ -1173,10 +1173,10 @@ mvm.ShowEIncome.Execute(mvm);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>346</y>
-      <w>178</w>
-      <h>8</h>
+      <x>204</x>
+      <y>519</y>
+      <w>267</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listWindow.ShowDialog();</panel_attributes>
@@ -1185,10 +1185,10 @@ listWindow.ShowDialog();</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>68</x>
-      <y>352</y>
-      <w>6</w>
-      <h>14</h>
+      <x>201</x>
+      <y>528</y>
+      <w>9</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -1196,10 +1196,10 @@ listWindow.ShowDialog();</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>196</x>
-      <y>242</y>
-      <w>92</w>
-      <h>8</h>
+      <x>393</x>
+      <y>363</y>
+      <w>138</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>listWindow.ShowDialog();
 style=wordwrap</panel_attributes>
@@ -1208,10 +1208,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>534</x>
-      <y>480</y>
-      <w>28</w>
-      <h>6</h>
+      <x>900</x>
+      <y>720</y>
+      <w>42</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:CustomerRepository_</panel_attributes>
     <additional_attributes/>
@@ -1219,10 +1219,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>476</x>
-      <y>510</y>
-      <w>28</w>
-      <h>6</h>
+      <x>813</x>
+      <y>765</y>
+      <w>42</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:EIncomeViewModel_</panel_attributes>
     <additional_attributes/>
@@ -1230,10 +1230,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>476</x>
-      <y>522</y>
-      <w>28</w>
-      <h>6</h>
+      <x>813</x>
+      <y>783</y>
+      <w>42</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:CustomerViewModel_</panel_attributes>
     <additional_attributes/>
@@ -1241,10 +1241,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>334</x>
-      <y>490</y>
-      <w>136</w>
-      <h>42</h>
+      <x>600</x>
+      <y>735</y>
+      <w>204</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>Loop</panel_attributes>
     <additional_attributes/>
@@ -1252,10 +1252,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>352</x>
-      <y>490</y>
-      <w>102</w>
-      <h>8</h>
+      <x>627</x>
+      <y>735</y>
+      <w>153</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ foreach ] (Customer customer in fm.CustomerRepository.GetCustomers())
 
@@ -1265,10 +1265,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>394</x>
-      <y>492</y>
-      <w>104</w>
-      <h>6</h>
+      <x>690</x>
+      <y>738</y>
+      <w>156</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>500.0;10.0;10.0;10.0</additional_attributes>
@@ -1276,10 +1276,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>352</x>
-      <y>506</y>
-      <w>102</w>
-      <h>8</h>
+      <x>627</x>
+      <y>759</y>
+      <w>153</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ foreach ] (EIncome eIncome in customer.EIncomes)
 style=wordwrap</panel_attributes>
@@ -1288,10 +1288,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>338</x>
-      <y>504</y>
-      <w>128</w>
-      <h>16</h>
+      <x>606</x>
+      <y>756</y>
+      <w>192</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>Loop</panel_attributes>
     <additional_attributes/>
@@ -1299,10 +1299,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>482</x>
-      <y>480</y>
-      <w>28</w>
-      <h>6</h>
+      <x>822</x>
+      <y>720</y>
+      <w>42</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:FileManager_</panel_attributes>
     <additional_attributes/>
@@ -1310,10 +1310,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>494</x>
-      <y>484</y>
-      <w>6</w>
-      <h>10</h>
+      <x>840</x>
+      <y>726</y>
+      <w>9</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -1321,10 +1321,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>494</x>
-      <y>490</y>
-      <w>4</w>
-      <h>8</h>
+      <x>840</x>
+      <y>735</y>
+      <w>6</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -1332,10 +1332,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>490</y>
-      <w>54</w>
-      <h>8</h>
+      <x>843</x>
+      <y>735</y>
+      <w>81</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 CustomerRepository.GetCustomers()</panel_attributes>
@@ -1344,10 +1344,10 @@ CustomerRepository.GetCustomers()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>484</y>
-      <w>6</w>
-      <h>10</h>
+      <x>918</x>
+      <y>726</y>
+      <w>9</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -1355,10 +1355,10 @@ CustomerRepository.GetCustomers()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>546</x>
-      <y>490</y>
-      <w>4</w>
-      <h>14</h>
+      <x>918</x>
+      <y>735</y>
+      <w>6</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -1366,10 +1366,10 @@ CustomerRepository.GetCustomers()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
-      <y>492</y>
-      <w>136</w>
-      <h>14</h>
+      <x>720</x>
+      <y>738</y>
+      <w>204</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 customers = Customer[0.*]</panel_attributes>
@@ -1378,10 +1378,10 @@ customers = Customer[0.*]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>382</x>
-      <y>492</y>
-      <w>22</w>
-      <h>18</h>
+      <x>672</x>
+      <y>738</y>
+      <w>33</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 </panel_attributes>
@@ -1390,10 +1390,10 @@ customers = Customer[0.*]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>510</y>
-      <w>130</w>
-      <h>8</h>
+      <x>624</x>
+      <y>765</y>
+      <w>195</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 EIncomes.Add(new EIncomeViewModel(eIncome));</panel_attributes>
@@ -1402,10 +1402,10 @@ EIncomes.Add(new EIncomeViewModel(eIncome));</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>470</y>
-      <w>90</w>
-      <h>16</h>
+      <x>624</x>
+      <y>705</y>
+      <w>135</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 SelectedEIncomes = EIncomeViewModel[0.*]
@@ -1417,10 +1417,10 @@ SelectedItem : EIncomeViewModel</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>522</y>
-      <w>130</w>
-      <h>8</h>
+      <x>624</x>
+      <y>783</y>
+      <w>195</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 Customers.Add(new CustomerViewModel(customer));</panel_attributes>
@@ -1429,10 +1429,10 @@ Customers.Add(new CustomerViewModel(customer));</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>480</y>
-      <w>28</w>
-      <h>66</h>
+      <x>585</x>
+      <y>720</y>
+      <w>42</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -1441,10 +1441,10 @@ Customers.Add(new CustomerViewModel(customer));</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>348</x>
-      <y>464</y>
-      <w>4</w>
-      <h>154</h>
+      <x>621</x>
+      <y>696</y>
+      <w>6</w>
+      <h>231</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -1452,10 +1452,10 @@ Customers.Add(new CustomerViewModel(customer));</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>340</x>
-      <y>454</y>
-      <w>20</w>
-      <h>6</h>
+      <x>609</x>
+      <y>681</y>
+      <w>30</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:ListViewModel_</panel_attributes>
     <additional_attributes/>
@@ -1463,10 +1463,10 @@ Customers.Add(new CustomerViewModel(customer));</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>458</y>
-      <w>6</w>
-      <h>10</h>
+      <x>621</x>
+      <y>687</y>
+      <w>9</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -1474,10 +1474,10 @@ Customers.Add(new CustomerViewModel(customer));</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>272</x>
-      <y>468</y>
-      <w>80</w>
-      <h>8</h>
+      <x>507</x>
+      <y>702</y>
+      <w>120</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 DataContext = ListViewModel lvm</panel_attributes>
@@ -1486,10 +1486,10 @@ DataContext = ListViewModel lvm</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
-      <y>482</y>
-      <w>274</w>
-      <h>8</h>
+      <x>99</x>
+      <y>723</y>
+      <w>411</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 ListWindowDisplay</panel_attributes>
@@ -1498,10 +1498,10 @@ ListWindowDisplay</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>488</y>
-      <w>6</w>
-      <h>10</h>
+      <x>504</x>
+      <y>732</y>
+      <w>9</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -1509,10 +1509,10 @@ ListWindowDisplay</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>540</y>
-      <w>50</w>
-      <h>14</h>
+      <x>624</x>
+      <y>810</y>
+      <w>75</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 bool outcome = false;
@@ -1522,10 +1522,10 @@ SelectedEIncomes.Clear()</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>332</x>
-      <y>554</y>
-      <w>140</w>
-      <h>54</h>
+      <x>597</x>
+      <y>831</y>
+      <w>210</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -1533,10 +1533,10 @@ SelectedEIncomes.Clear()</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>352</x>
-      <y>554</y>
-      <w>36</w>
-      <h>8</h>
+      <x>627</x>
+      <y>831</y>
+      <w>54</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (input.Length &gt; 0)
 style=wordwrap</panel_attributes>
@@ -1545,10 +1545,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>562</y>
-      <w>200</w>
-      <h>8</h>
+      <x>624</x>
+      <y>843</y>
+      <w>300</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_attributes>
@@ -1557,10 +1557,10 @@ Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_att
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>502</y>
-      <w>6</w>
-      <h>64</h>
+      <x>918</x>
+      <y>753</y>
+      <w>9</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
@@ -1568,10 +1568,10 @@ Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_att
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>546</x>
-      <y>562</y>
-      <w>4</w>
-      <h>8</h>
+      <x>918</x>
+      <y>843</y>
+      <w>6</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -1579,10 +1579,10 @@ Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_att
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>532</x>
-      <y>550</y>
-      <w>80</w>
-      <h>30</h>
+      <x>897</x>
+      <y>825</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Loop</panel_attributes>
     <additional_attributes/>
@@ -1590,10 +1590,10 @@ Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_att
   <element>
     <id>Text</id>
     <coordinates>
-      <x>550</x>
-      <y>550</y>
-      <w>62</w>
-      <h>8</h>
+      <x>924</x>
+      <y>825</y>
+      <w>93</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ foreach ] (Customer customer in customers)
 style=wordwrap</panel_attributes>
@@ -1602,10 +1602,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>536</x>
-      <y>558</y>
-      <w>72</w>
-      <h>18</h>
+      <x>903</x>
+      <y>837</y>
+      <w>108</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>opt</panel_attributes>
     <additional_attributes/>
@@ -1613,10 +1613,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>550</x>
-      <y>558</y>
-      <w>62</w>
-      <h>8</h>
+      <x>924</x>
+      <y>837</y>
+      <w>93</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (customer.CustomerID == customerID)
 style=wordwrap</panel_attributes>
@@ -1625,10 +1625,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>568</y>
-      <w>6</w>
-      <h>18</h>
+      <x>918</x>
+      <y>852</y>
+      <w>9</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -1636,10 +1636,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>336</x>
-      <y>568</y>
-      <w>132</w>
-      <h>36</h>
+      <x>603</x>
+      <y>852</y>
+      <w>198</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Loop</panel_attributes>
     <additional_attributes/>
@@ -1647,10 +1647,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>352</x>
-      <y>568</y>
-      <w>66</w>
-      <h>6</h>
+      <x>627</x>
+      <y>852</y>
+      <w>99</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>[ foreach ] (EIncomeViewModel evm in EIncomes)
 style=wordwrap</panel_attributes>
@@ -1659,10 +1659,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>340</x>
-      <y>574</y>
-      <w>122</w>
-      <h>24</h>
+      <x>609</x>
+      <y>861</y>
+      <w>183</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Opt</panel_attributes>
     <additional_attributes/>
@@ -1670,10 +1670,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>352</x>
-      <y>574</y>
-      <w>66</w>
-      <h>8</h>
+      <x>627</x>
+      <y>861</y>
+      <w>99</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (evm.CVR == u.StringToInt(input) ||
 c != null &amp;&amp; evm.CVR == c.CVR)
@@ -1683,10 +1683,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>582</y>
-      <w>54</w>
-      <h>14</h>
+      <x>624</x>
+      <y>873</y>
+      <w>81</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 SelectedEIncomes.Add(evm);
@@ -1696,10 +1696,10 @@ outcome = true;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>540</y>
-      <w>28</w>
-      <h>80</h>
+      <x>585</x>
+      <y>810</y>
+      <w>42</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 m2=return outcome</panel_attributes>
@@ -1708,10 +1708,10 @@ m2=return outcome</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>616</y>
-      <w>6</w>
-      <h>14</h>
+      <x>621</x>
+      <y>924</y>
+      <w>9</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -1719,10 +1719,10 @@ m2=return outcome</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>752</x>
-      <y>202</y>
-      <w>6</w>
-      <h>432</h>
+      <x>1227</x>
+      <y>303</y>
+      <w>9</w>
+      <h>648</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;2140.0</additional_attributes>
@@ -1730,10 +1730,10 @@ m2=return outcome</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
-      <y>634</y>
-      <w>756</w>
-      <h>8</h>
+      <x>99</x>
+      <y>951</y>
+      <w>1134</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 DetailedWindowDisplay</panel_attributes>
@@ -1742,10 +1742,10 @@ DetailedWindowDisplay</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>752</x>
-      <y>630</y>
-      <w>4</w>
-      <h>12</h>
+      <x>1227</x>
+      <y>945</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -1753,10 +1753,10 @@ DetailedWindowDisplay</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>752</x>
-      <y>640</y>
-      <w>6</w>
-      <h>14</h>
+      <x>1227</x>
+      <y>960</y>
+      <w>9</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -1764,10 +1764,10 @@ DetailedWindowDisplay</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>754</x>
-      <y>192</y>
-      <w>80</w>
-      <h>8</h>
+      <x>1230</x>
+      <y>288</y>
+      <w>120</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 DataContext = dvm;</panel_attributes>
@@ -1776,10 +1776,10 @@ DataContext = dvm;</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>818</x>
-      <y>184</y>
-      <w>28</w>
-      <h>6</h>
+      <x>1326</x>
+      <y>276</y>
+      <w>42</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>_:DetailedViewModel_</panel_attributes>
     <additional_attributes/>
@@ -1787,10 +1787,10 @@ DataContext = dvm;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>188</y>
-      <w>6</w>
-      <h>10</h>
+      <x>1344</x>
+      <y>282</y>
+      <w>9</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
@@ -1798,10 +1798,10 @@ DataContext = dvm;</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>830</x>
-      <y>194</y>
-      <w>4</w>
-      <h>72</h>
+      <x>1344</x>
+      <y>291</y>
+      <w>6</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -1809,10 +1809,10 @@ DataContext = dvm;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>210</y>
-      <w>42</w>
-      <h>12</h>
+      <x>1347</x>
+      <y>315</y>
+      <w>63</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 bool outcome = false;
@@ -1822,10 +1822,10 @@ EIncome = null;</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>818</x>
-      <y>220</y>
-      <w>108</w>
-      <h>50</h>
+      <x>1326</x>
+      <y>330</y>
+      <w>162</w>
+      <h>75</h>
     </coordinates>
     <panel_attributes>opt</panel_attributes>
     <additional_attributes/>
@@ -1833,10 +1833,10 @@ EIncome = null;</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>834</x>
-      <y>220</y>
-      <w>36</w>
-      <h>8</h>
+      <x>1350</x>
+      <y>330</y>
+      <w>54</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ if ] (input.Length &gt; 0)
 style=wordwrap</panel_attributes>
@@ -1845,10 +1845,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>228</y>
-      <w>112</w>
-      <h>8</h>
+      <x>1347</x>
+      <y>342</y>
+      <w>168</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=-
 Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_attributes>
@@ -1857,10 +1857,10 @@ Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_att
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>548</x>
-      <y>230</y>
-      <w>396</w>
-      <h>340</h>
+      <x>921</x>
+      <y>345</y>
+      <w>594</w>
+      <h>510</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;1680.0;1960.0;1670.0;1960.0;10.0</additional_attributes>
@@ -1868,10 +1868,10 @@ Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_att
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>820</x>
-      <y>234</y>
-      <w>104</w>
-      <h>34</h>
+      <x>1329</x>
+      <y>351</y>
+      <w>156</w>
+      <h>51</h>
     </coordinates>
     <panel_attributes>Loop</panel_attributes>
     <additional_attributes/>
@@ -1879,10 +1879,10 @@ Customer c = fm.CustomerRepository.GetCustomer(u.StringToInt(input));</panel_att
   <element>
     <id>Text</id>
     <coordinates>
-      <x>834</x>
-      <y>234</y>
-      <w>66</w>
-      <h>8</h>
+      <x>1350</x>
+      <y>351</y>
+      <w>99</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>[ foreach ] (EIncomeViewModel evm in EIncomes)
 style=wordwrap</panel_attributes>
@@ -1891,10 +1891,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>822</x>
-      <y>240</y>
-      <w>100</w>
-      <h>24</h>
+      <x>1332</x>
+      <y>360</y>
+      <w>150</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>opt</panel_attributes>
     <additional_attributes/>
@@ -1902,10 +1902,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>834</x>
-      <y>240</y>
-      <w>90</w>
-      <h>24</h>
+      <x>1350</x>
+      <y>360</y>
+      <w>135</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>[ if ] (evm.CVR == int.Parse(input) &amp;&amp; startDate &lt;= evm.PeriodStart &amp;&amp; endDate &gt;= evm.PeriodEnd
 || c != null &amp;&amp; evm.CVR == c.CVR) &amp;&amp; startDate &lt;= evm.PeriodStart &amp;&amp; endDate &gt;= evm.PeriodEnd
@@ -1915,10 +1915,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>254</y>
-      <w>36</w>
-      <h>12</h>
+      <x>1347</x>
+      <y>381</y>
+      <w>54</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 EIncome = evm;
@@ -1928,10 +1928,10 @@ outcome = true;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>770</x>
-      <y>258</y>
-      <w>64</w>
-      <h>8</h>
+      <x>1254</x>
+      <y>387</y>
+      <w>96</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Return outcome</panel_attributes>
@@ -1940,10 +1940,10 @@ Return outcome</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>264</y>
-      <w>6</w>
-      <h>12</h>
+      <x>1344</x>
+      <y>396</y>
+      <w>9</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>

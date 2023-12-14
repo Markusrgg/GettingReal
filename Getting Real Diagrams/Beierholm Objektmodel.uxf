@@ -2,169 +2,132 @@
 <diagram program="umlet" version="15.1">
   <zoom_level>9</zoom_level>
   <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>198</x>
-      <y>315</y>
-      <w>135</w>
-      <h>135</h>
-    </coordinates>
-    <panel_attributes>Regnskab
-December 2022.excel
-Regnskab
-December 2022.pdf</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>216</x>
-      <y>270</y>
-      <w>90</w>
+      <x>720</x>
+      <y>396</y>
+      <w>117</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>RPA</panel_attributes>
+    <panel_attributes>Regnskab</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>675</x>
+      <y>432</y>
+      <w>207</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>26550688VIRSUM202201-202212
+26550688VIRSUM202301-202310</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>576</x>
-      <y>270</y>
-      <w>90</w>
+      <x>999</x>
+      <y>396</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>EIndkomst</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>909</x>
+      <y>432</y>
+      <w>270</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>26550688
+2022:01
+2022:12
+Dannet i eIndkomst 2023.11.08 09:23:18
+Feltnr0013 - Feltnr20005</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>540</x>
+      <y>441</y>
+      <w>108</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Markus Catering
+26550688
+A/S</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1215</x>
+      <y>396</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>Felt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1206</x>
+      <y>432</y>
+      <w>99</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Feltnr0113
+221983,35</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>558</x>
+      <y>396</y>
+      <w>72</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>Kunde</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>405</x>
-      <y>270</y>
-      <w>90</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>Filbehandler</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>747</x>
-      <y>270</y>
-      <w>90</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>E-Indkomst</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>378</x>
-      <y>315</y>
-      <w>144</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>Regnskab
-December 2022.Base64
-Maj 20000kr profit</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>720</x>
-      <y>315</y>
-      <w>144</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>Vinterkvartal
-2022
-Tabel af December -
-Regnskab.excel
-ikke forskudt</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>567</x>
-      <y>333</y>
-      <w>108</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes>Beierholm
-241352
-ApS</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>324</x>
-      <y>378</y>
-      <w>72</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>513</x>
-      <y>378</y>
-      <w>72</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>666</x>
-      <y>378</y>
-      <w>72</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>936</x>
-      <y>270</y>
-      <w>90</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>Adresse</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>891</x>
-      <y>333</y>
-      <w>189</w>
-      <h>117</h>
-    </coordinates>
-    <panel_attributes>Risingsvej 63, 1
-5000 Odense</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>639</x>
-      <y>423</y>
-      <w>297</w>
-      <h>72</h>
+      <y>477</y>
+      <w>54</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>310.0;10.0;240.0;60.0;100.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>873</x>
+      <y>477</y>
+      <w>54</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>477</y>
+      <w>54</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
